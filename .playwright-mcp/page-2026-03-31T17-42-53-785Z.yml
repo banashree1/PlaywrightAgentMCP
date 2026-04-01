@@ -1,0 +1,417 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Tricentis Logo Vehicle Insurance Application This is a sample application, Version 1.0.1" [ref=e6] [cursor=pointer]:
+        - /url: index.php
+        - img "Tricentis Logo" [ref=e7]
+        - generic [ref=e8]:
+          - heading "Vehicle Insurance Application" [level=1] [ref=e9]
+          - text: This is a sample application, Version 1.0.1
+      - generic [ref=e11]:
+        - link " Visit Support!" [ref=e12] [cursor=pointer]:
+          - /url: https://support.tricentis.com
+          - generic [ref=e13]: 
+          - text: Visit Support!
+        - textbox "Search Support..." [ref=e14]
+        - button "" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: 
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - text: 
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Automobile" [ref=e22] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e23]:
+            - link "Truck" [ref=e24] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e25]:
+            - link "Motorcycle" [ref=e26] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e27]:
+            - link "Camper" [ref=e28] [cursor=pointer]:
+              - /url: "#"
+      - link "Request Demo" [ref=e30] [cursor=pointer]:
+        - /url: http://www.tricentis.com/tricentis-tosca-testsuite/tosca-testsuite-trial/
+  - main [ref=e31]:
+    - generic [ref=e33]:
+      - link "Home" [ref=e34] [cursor=pointer]:
+        - /url: index.php
+      - text: undefined Insurance
+  - generic [ref=e35]:
+    - generic [ref=e38]:
+      - navigation [ref=e39]:
+        - list:
+          - listitem [ref=e40]:
+            - link "Enter Vehicle Data 12" [ref=e41] [cursor=pointer]:
+              - /url: "#"
+              - text: Enter Vehicle Data
+              - generic [ref=e42]: "12"
+          - listitem [ref=e43]:
+            - link "Enter Insurant Data 7" [active] [ref=e44]:
+              - /url: "#"
+              - text: Enter Insurant Data
+              - generic [ref=e45]: "7"
+          - listitem [ref=e46]:
+            - link "Enter Product Data 6" [ref=e47] [cursor=pointer]:
+              - /url: "#"
+              - text: Enter Product Data
+              - generic [ref=e48]: "6"
+          - listitem [ref=e49]:
+            - link "Select Price Option 1" [ref=e50] [cursor=pointer]:
+              - /url: "#"
+              - text: Select Price Option
+              - generic [ref=e51]: "1"
+          - listitem [ref=e52]:
+            - link "Send Quote 4" [ref=e53] [cursor=pointer]:
+              - /url: "#"
+              - text: Send Quote
+              - generic [ref=e54]: "4"
+      - generic [ref=e56]:
+        - text: 
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: First Name
+            - textbox [ref=e144]
+          - generic [ref=e146]:
+            - generic [ref=e147]: Last Name
+            - textbox [ref=e148]
+          - generic [ref=e150]:
+            - generic [ref=e151]: Date of Birth
+            - textbox "MM/DD/YYYY" [ref=e152]
+            - button "" [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]: 
+          - generic [ref=e156]:
+            - generic [ref=e157]: Gender
+            - paragraph [ref=e158]:
+              - generic [ref=e159] [cursor=pointer]:
+                - radio "Male" [ref=e160]
+                - text: Male
+              - generic [ref=e162] [cursor=pointer]:
+                - radio "Female" [ref=e163]
+                - text: Female
+          - generic [ref=e165]:
+            - generic [ref=e166]: Street Address
+            - textbox [ref=e167]
+          - generic [ref=e168]:
+            - generic [ref=e169]: Country
+            - combobox [ref=e170] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "Afghanistan"
+              - option "Albania"
+              - option "Algeria"
+              - option "American Samoa"
+              - option "Andorra"
+              - option "Angola"
+              - option "Anguilla"
+              - option "Antarctica"
+              - option "Antigua and Barbuda"
+              - option "Argentina"
+              - option "Armenia"
+              - option "Aruba"
+              - option "Australia"
+              - option "Austria"
+              - option "Azerbaijan"
+              - option "Bahamas"
+              - option "Bahrain"
+              - option "Bangladesh"
+              - option "Barbados"
+              - option "Belarus"
+              - option "Belgium"
+              - option "Belize"
+              - option "Benin"
+              - option "Bermuda"
+              - option "Bhutan"
+              - option "Bolivia - Plurinational State of"
+              - option "Bonaire - Sint Eustatius and Saba"
+              - option "Bosnia and Herzegovina"
+              - option "Botswana"
+              - option "Bouvet Island"
+              - option "Brazil"
+              - option "British Indian Ocean Territory"
+              - option "Brunei Darussalam"
+              - option "Bulgaria"
+              - option "Burkina Faso"
+              - option "Burundi"
+              - option "Cabo Verde"
+              - option "Cambodia"
+              - option "Cameroon"
+              - option "Canada"
+              - option "Cayman Islands"
+              - option "Central African Republic"
+              - option "Chad"
+              - option "Chile"
+              - option "China"
+              - option "Christmas Island"
+              - option "Cocos (Keeling) Islands"
+              - option "Colombia"
+              - option "Comoros"
+              - option "Congo"
+              - option "Congo - the Democratic Republic of the"
+              - option "Cook Islands"
+              - option "Costa Rica"
+              - option "Croatia"
+              - option "Cuba"
+              - option "Curaçao"
+              - option "Cyprus"
+              - option "Czech Republic"
+              - option "Côte d'Ivoire"
+              - option "Denmark"
+              - option "Djibouti"
+              - option "Dominica"
+              - option "Dominican Republic"
+              - option "Ecuador"
+              - option "Egypt"
+              - option "El Salvador"
+              - option "Equatorial Guinea"
+              - option "Eritrea"
+              - option "Estonia"
+              - option "Ethiopia"
+              - option "Falkland Islands (Malvinas)"
+              - option "Faroe Islands"
+              - option "Fiji"
+              - option "Finland"
+              - option "France"
+              - option "French Guiana"
+              - option "French Polynesia"
+              - option "French Southern Territories"
+              - option "Gabon"
+              - option "Gambia"
+              - option "Georgia"
+              - option "Germany"
+              - option "Ghana"
+              - option "Gibraltar"
+              - option "Greece"
+              - option "Greenland"
+              - option "Grenada"
+              - option "Guadeloupe"
+              - option "Guam"
+              - option "Guatemala"
+              - option "Guernsey"
+              - option "Guinea"
+              - option "Guinea-Bissau"
+              - option "Guyana"
+              - option "Haiti"
+              - option "Heard Island and McDonald Islands"
+              - option "Holy See (Vatican City State)"
+              - option "Honduras"
+              - option "Hong Kong"
+              - option "Hungary"
+              - option "Iceland"
+              - option "India"
+              - option "Indonesia"
+              - option "Iran - Islamic Republic of"
+              - option "Iraq"
+              - option "Ireland"
+              - option "Isle of Man"
+              - option "Israel"
+              - option "Italy"
+              - option "Jamaica"
+              - option "Japan"
+              - option "Jersey"
+              - option "Jordan"
+              - option "Kazakhstan"
+              - option "Kenya"
+              - option "Kiribati"
+              - option "Korea - Democratic People's Republic of"
+              - option "Korea - Republic of"
+              - option "Kuwait"
+              - option "Kyrgyzstan"
+              - option "Lao People's Democratic Republic"
+              - option "Latvia"
+              - option "Lebanon"
+              - option "Lesotho"
+              - option "Liberia"
+              - option "Libya"
+              - option "Liechtenstein"
+              - option "Lithuania"
+              - option "Luxembourg"
+              - option "Macao"
+              - option "Macedonia - the former Yugoslav Republic of"
+              - option "Madagascar"
+              - option "Malawi"
+              - option "Malaysia"
+              - option "Maldives"
+              - option "Mali"
+              - option "Malta"
+              - option "Marshall Islands"
+              - option "Martinique"
+              - option "Mauritania"
+              - option "Mauritius"
+              - option "Mayotte"
+              - option "Mexico"
+              - option "Micronesia - Federated States of"
+              - option "Moldova - Republic of"
+              - option "Monaco"
+              - option "Mongolia"
+              - option "Montenegro"
+              - option "Montserrat"
+              - option "Morocco"
+              - option "Mozambique"
+              - option "Myanmar"
+              - option "Namibia"
+              - option "Nauru"
+              - option "Nepal"
+              - option "Netherlands"
+              - option "New Caledonia"
+              - option "New Zealand"
+              - option "Nicaragua"
+              - option "Niger"
+              - option "Nigeria"
+              - option "Niue"
+              - option "Norfolk Island"
+              - option "Northern Mariana Islands"
+              - option "Norway"
+              - option "Oman"
+              - option "Pakistan"
+              - option "Palau"
+              - option "Palestine - State of"
+              - option "Panama"
+              - option "Papua New Guinea"
+              - option "Paraguay"
+              - option "Peru"
+              - option "Philippines"
+              - option "Pitcairn"
+              - option "Poland"
+              - option "Portugal"
+              - option "Puerto Rico"
+              - option "Qatar"
+              - option "Romania"
+              - option "Russian Federation"
+              - option "Rwanda"
+              - option "Réunion"
+              - option "Saint Barthélemy"
+              - option "Saint Helena - Ascension and Tristan da Cunha"
+              - option "Saint Kitts and Nevis"
+              - option "Saint Lucia"
+              - option "Saint Martin (French part)"
+              - option "Saint Pierre and Miquelon"
+              - option "Saint Vincent and the Grenadines"
+              - option "Samoa"
+              - option "San Marino"
+              - option "Sao Tome and Principe"
+              - option "Saudi Arabia"
+              - option "Senegal"
+              - option "Serbia"
+              - option "Seychelles"
+              - option "Sierra Leone"
+              - option "Singapore"
+              - option "Sint Maarten (Dutch part)"
+              - option "Slovakia"
+              - option "Slovenia"
+              - option "Solomon Islands"
+              - option "Somalia"
+              - option "South Africa"
+              - option "South Georgia and the South Sandwich Islands"
+              - option "South Sudan"
+              - option "Spain"
+              - option "Sri Lanka"
+              - option "Sudan"
+              - option "Suriname"
+              - option "Svalbard and Jan Mayen"
+              - option "Swaziland"
+              - option "Sweden"
+              - option "Switzerland"
+              - option "Syrian Arab Republic"
+              - option "Taiwan - Province of China"
+              - option "Tajikistan"
+              - option "Tanzania - United Republic of"
+              - option "Thailand"
+              - option "Timor-Leste"
+              - option "Togo"
+              - option "Tokelau"
+              - option "Tonga"
+              - option "Trinidad and Tobago"
+              - option "Tunisia"
+              - option "Turkey"
+              - option "Turkmenistan"
+              - option "Turks and Caicos Islands"
+              - option "Tuvalu"
+              - option "Uganda"
+              - option "Ukraine"
+              - option "United Arab Emirates"
+              - option "United Kingdom"
+              - option "United States"
+              - option "United States Minor Outlying Islands"
+              - option "Uruguay"
+              - option "Uzbekistan"
+              - option "Vanuatu"
+              - option "Venezuela - Bolivarian Republic of"
+              - option "Viet Nam"
+              - option "Virgin Islands - British"
+              - option "Virgin Islands - U.S."
+              - option "Wallis and Futuna"
+              - option "Western Sahara"
+              - option "Yemen"
+              - option "Zambia"
+              - option "Zimbabwe"
+              - option "Åland Islands"
+          - generic [ref=e172]:
+            - generic [ref=e173]: Zip Code
+            - textbox [ref=e174]
+          - generic [ref=e176]:
+            - generic [ref=e177]: City
+            - textbox [ref=e178]
+          - generic [ref=e179]:
+            - generic [ref=e180]: Occupation
+            - combobox [ref=e181] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "Employee"
+              - option "Public Official"
+              - option "Farmer"
+              - option "Unemployed"
+              - option "Selfemployed"
+          - generic [ref=e183]:
+            - generic [ref=e184]: Hobbies
+            - paragraph [ref=e185]:
+              - generic [ref=e186] [cursor=pointer]:
+                - checkbox "Speeding" [ref=e187]
+                - text: Speeding
+              - generic [ref=e189] [cursor=pointer]:
+                - checkbox "Bungee Jumping" [ref=e190]
+                - text: Bungee Jumping
+              - generic [ref=e192] [cursor=pointer]:
+                - checkbox "Cliff Diving" [ref=e193]
+                - text: Cliff Diving
+              - generic [ref=e195] [cursor=pointer]:
+                - checkbox "Skydiving" [ref=e196]
+                - text: Skydiving
+              - generic [ref=e198] [cursor=pointer]:
+                - checkbox "Other" [ref=e199]
+                - text: Other
+          - generic [ref=e202]:
+            - generic [ref=e203]: Website
+            - textbox [ref=e204]
+          - generic [ref=e205]:
+            - generic [ref=e206]: Picture
+            - button "Choose File" [ref=e207]
+            - generic [ref=e208]:
+              - textbox [ref=e209]
+              - button "Open" [ref=e210] [cursor=pointer]
+          - generic [ref=e211]:
+            - button "« Prev" [ref=e213] [cursor=pointer]
+            - button "Next »" [ref=e214] [cursor=pointer]
+        - text:        
+    - generic [ref=e126]:
+      - navigation [ref=e127]:
+        - link "About" [ref=e128] [cursor=pointer]:
+          - /url: http://www.tricentis.com/about
+        - link "Products" [ref=e129] [cursor=pointer]:
+          - /url: http://www.tricentis.com/tricentis-tosca-testsuite
+        - link "Events & Webinars" [ref=e130] [cursor=pointer]:
+          - /url: http://www.tricentis.com/events-webinars
+        - link "Resources" [ref=e131] [cursor=pointer]:
+          - /url: http://www.tricentis.com/resources
+        - link "Services" [ref=e132] [cursor=pointer]:
+          - /url: http://www.tricentis.com/services
+      - generic [ref=e133]:
+        - link "" [ref=e134] [cursor=pointer]:
+          - /url: https://www.facebook.com/TRICENTIS
+          - generic [ref=e135]: 
+        - link "" [ref=e136] [cursor=pointer]:
+          - /url: https://twitter.com/Tricentis
+          - generic [ref=e137]: 
+        - link "" [ref=e138] [cursor=pointer]:
+          - /url: https://plus.google.com/108151335013813449490/posts
+          - generic [ref=e139]: 
+      - generic [ref=e140]: Copyright 2021 by Tricentis GmbH. All rights reserved.

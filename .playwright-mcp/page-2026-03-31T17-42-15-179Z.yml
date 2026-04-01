@@ -1,0 +1,188 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Tricentis Logo Vehicle Insurance Application This is a sample application, Version 1.0.1" [ref=e6] [cursor=pointer]:
+        - /url: index.php
+        - img "Tricentis Logo" [ref=e7]
+        - generic [ref=e8]:
+          - heading "Vehicle Insurance Application" [level=1] [ref=e9]
+          - text: This is a sample application, Version 1.0.1
+      - generic [ref=e11]:
+        - link " Visit Support!" [ref=e12] [cursor=pointer]:
+          - /url: https://support.tricentis.com
+          - generic [ref=e13]: 
+          - text: Visit Support!
+        - textbox "Search Support..." [ref=e14]
+        - button "" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: 
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - text: 
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Automobile" [ref=e22] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e23]:
+            - link "Truck" [ref=e24] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e25]:
+            - link "Motorcycle" [ref=e26] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e27]:
+            - link "Camper" [ref=e28] [cursor=pointer]:
+              - /url: "#"
+      - link "Request Demo" [ref=e30] [cursor=pointer]:
+        - /url: http://www.tricentis.com/tricentis-tosca-testsuite/tosca-testsuite-trial/
+  - main [ref=e31]:
+    - generic [ref=e33]:
+      - link "Home" [ref=e34] [cursor=pointer]:
+        - /url: index.php
+      - text: undefined Insurance
+  - generic [ref=e35]:
+    - generic [ref=e38]:
+      - navigation [ref=e39]:
+        - list:
+          - listitem [ref=e40]:
+            - link "Enter Vehicle Data 12" [ref=e41]:
+              - /url: "#"
+              - text: Enter Vehicle Data
+              - generic [ref=e42]: "12"
+          - listitem [ref=e43]:
+            - link "Enter Insurant Data 7" [ref=e44] [cursor=pointer]:
+              - /url: "#"
+              - text: Enter Insurant Data
+              - generic [ref=e45]: "7"
+          - listitem [ref=e46]:
+            - link "Enter Product Data 6" [ref=e47] [cursor=pointer]:
+              - /url: "#"
+              - text: Enter Product Data
+              - generic [ref=e48]: "6"
+          - listitem [ref=e49]:
+            - link "Select Price Option 1" [ref=e50] [cursor=pointer]:
+              - /url: "#"
+              - text: Select Price Option
+              - generic [ref=e51]: "1"
+          - listitem [ref=e52]:
+            - link "Send Quote 4" [ref=e53] [cursor=pointer]:
+              - /url: "#"
+              - text: Send Quote
+              - generic [ref=e54]: "4"
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: Make
+            - combobox [active] [ref=e60] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "Audi"
+              - option "BMW"
+              - option "Ford"
+              - option "Honda"
+              - option "Mazda"
+              - option "Mercedes Benz"
+              - option "Nissan"
+              - option "Opel"
+              - option "Porsche"
+              - option "Renault"
+              - option "Skoda"
+              - option "Suzuki"
+              - option "Toyota"
+              - option "Volkswagen"
+              - option "Volvo"
+            - generic [ref=e61]: Select an option
+          - generic [ref=e63]:
+            - generic [ref=e64]: Model
+            - combobox [ref=e65] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "Scooter"
+              - option "Three-Wheeler"
+              - option "Moped"
+              - option "Motorcycle"
+          - generic [ref=e67]:
+            - generic [ref=e68]: Cylinder Capacity [ccm]
+            - textbox [ref=e69]
+          - generic [ref=e71]:
+            - generic [ref=e72]: Engine Performance [kW]
+            - textbox [ref=e73]
+          - generic [ref=e75]:
+            - generic [ref=e76]: Date of Manufacture
+            - textbox "MM/DD/YYYY" [ref=e77]
+            - button "" [ref=e78] [cursor=pointer]:
+              - generic [ref=e79]: 
+          - generic [ref=e81]:
+            - generic [ref=e82]: Number of Seats
+            - combobox [ref=e83] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "1"
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+              - option "6"
+              - option "7"
+              - option "8"
+              - option "9"
+          - generic [ref=e85]:
+            - generic [ref=e86]: Right Hand Drive
+            - paragraph [ref=e87]:
+              - generic [ref=e88] [cursor=pointer]:
+                - radio "Yes" [ref=e89]
+                - text: "Yes"
+              - generic [ref=e91] [cursor=pointer]:
+                - radio "No" [ref=e92]
+                - text: "No"
+          - generic [ref=e94]:
+            - generic [ref=e95]: Number of Seats
+            - combobox [ref=e96] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "1"
+              - option "2"
+              - option "3"
+          - generic [ref=e98]:
+            - generic [ref=e99]: Fuel Type
+            - combobox [ref=e100] [cursor=pointer]:
+              - option "– please select –" [selected]
+              - option "Petrol"
+              - option "Diesel"
+              - option "Electric Power"
+              - option "Gas"
+              - option "Other"
+          - generic [ref=e102]:
+            - generic [ref=e103]: Payload [kg]
+            - textbox [ref=e104]
+          - generic [ref=e106]:
+            - generic [ref=e107]: Total Weight [kg]
+            - textbox [ref=e108]
+          - generic [ref=e110]:
+            - generic [ref=e111]: List Price [$]
+            - textbox [ref=e112]
+          - generic [ref=e114]:
+            - generic [ref=e115]: License Plate Number
+            - textbox [ref=e116]
+          - generic [ref=e117]:
+            - generic [ref=e118]: Annual Mileage [mi]
+            - textbox [ref=e119]
+          - button "Next »" [ref=e123] [cursor=pointer]
+        - text:         
+    - generic [ref=e126]:
+      - navigation [ref=e127]:
+        - link "About" [ref=e128] [cursor=pointer]:
+          - /url: http://www.tricentis.com/about
+        - link "Products" [ref=e129] [cursor=pointer]:
+          - /url: http://www.tricentis.com/tricentis-tosca-testsuite
+        - link "Events & Webinars" [ref=e130] [cursor=pointer]:
+          - /url: http://www.tricentis.com/events-webinars
+        - link "Resources" [ref=e131] [cursor=pointer]:
+          - /url: http://www.tricentis.com/resources
+        - link "Services" [ref=e132] [cursor=pointer]:
+          - /url: http://www.tricentis.com/services
+      - generic [ref=e133]:
+        - link "" [ref=e134] [cursor=pointer]:
+          - /url: https://www.facebook.com/TRICENTIS
+          - generic [ref=e135]: 
+        - link "" [ref=e136] [cursor=pointer]:
+          - /url: https://twitter.com/Tricentis
+          - generic [ref=e137]: 
+        - link "" [ref=e138] [cursor=pointer]:
+          - /url: https://plus.google.com/108151335013813449490/posts
+          - generic [ref=e139]: 
+      - generic [ref=e140]: Copyright 2021 by Tricentis GmbH. All rights reserved.

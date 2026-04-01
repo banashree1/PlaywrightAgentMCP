@@ -1,0 +1,132 @@
+name: 🎭 Playwright CI/CD Pipeline
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches: [ main, develop ]
+  
+  # Trigger on pull requests
+  pull_request:
+    branches: [ main ]
+  
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run tests against'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+      browser:
+        description: 'Browser to run tests on'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+        - all
+        - chromium
+        - firefox
+        - webkit
+  
+  # Scheduled runs (every day at 2 AM UTC)
+  schedule:
+    - cron: '0 2 * * *'
+
+env:
+  # Set default environment
+  TEST_ENV: ${{ github.event.inputs.environment || 'staging' }}
+  BROWSER: ${{ github.event.inputs.browser || 'chromium' }}
+
+jobs:
+  test:
+    name: 🧪 Run Playwright Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    
+    steps:
+    - name: 📦 Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: 📋 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 📥 Install Dependencies
+      run: npm ci
+      
+    - name: 🎭 Install Playwright Browsers
+      run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+    - name: 🧪 Run Playwright Tests
+      run: |
+        if [ "${{ env.BROWSER }}" = "all" ]; then
+          npx playwright test --project=${{ matrix.browser }}
+        else
+          npx playwright test --project=${{ env.BROWSER }}
+        fi
+      env:
+        CI: true
+        
+    - name: 📊 Upload Test Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-results-${{ matrix.browser }}
+        path: |
+          playwright-report/
+          test-results/
+        retention-days: 7
+        
+    - name: 📈 Upload HTML Report to GitHub Pages
+      uses: actions/upload-pages-artifact@v3
+      if: always() && matrix.browser == 'chromium'
+      with:
+        path: playwright-report/
+        
+  deploy:
+    name: 🚀 Deploy Test Report
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+    
+    # Grant GitHub Pages permissions
+    permissions:
+      pages: write
+      id-token: write
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+    - name: 🌐 Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      
+  notify:
+    name: 📢 Notify Results
+    needs: [test, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📊 Test Results Summary
+      run: |
+        echo "## 🎭 Playwright Test Results" >> $GITHUB_STEP_SUMMARY
+        echo "- **Environment**: ${{ env.TEST_ENV }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Browser**: ${{ env.BROWSER }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Trigger**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status**: ${{ needs.test.result }}" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ needs.deploy.result }}" = "success" ]; then
+          echo "- **Report**: [View HTML Report](https://banashree1.github.io/PlaywrightAgentMCP/)" >> $GITHUB_STEP_SUMMARY
+        fi

@@ -3,7 +3,7 @@
 
 const { test, expect } = require('@playwright/test');
 
-test.describe('Tab 1 - Enter Vehicle Data - Happy Path Scenarios', () => {
+test.describe('Tab 1 - Enter Vehicles Data - Happy Path Scenarios', () => {
   test('Test Date Picker Functionality', async ({ page }) => {
     await page.goto('https://sampleapp.tricentis.com/101/app.php');
     

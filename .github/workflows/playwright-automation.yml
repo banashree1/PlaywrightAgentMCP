@@ -1,0 +1,217 @@
+name: 🤖 Playwright Test Automation & Git Sync
+
+on:
+  push:
+    branches: [ main, develop, feature/* ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run tests every day at 6 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      test_suite:
+        description: 'Test suite to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+        - all
+        - smoke
+        - regression
+        - vehicle-data
+        - insurance-data
+      environment:
+        description: 'Environment to test against'
+        required: false
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+      auto_commit:
+        description: 'Auto-commit test results'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  test:
+    name: 🎯 Run Playwright Tests
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+        
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 🔧 Install dependencies
+        run: npm ci
+        
+      - name: 🎭 Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+        
+      - name: 🧪 Run Playwright tests
+        run: |
+          if [ "${{ github.event.inputs.test_suite }}" == "smoke" ]; then
+            npx playwright test --grep "@smoke" --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "regression" ]; then
+            npx playwright test --grep "@regression" --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "vehicle-data" ]; then
+            npx playwright test tests/vehicle-data --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "insurance-data" ]; then
+            npx playwright test tests/insurance-data --project=${{ matrix.browser }}
+          else
+            npx playwright test --project=${{ matrix.browser }}
+          fi
+        env:
+          CI: true
+          TEST_ENV: ${{ github.event.inputs.environment || 'staging' }}
+          
+      - name: 📊 Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: playwright-report/
+          retention-days: 30
+          
+      - name: 📄 Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ matrix.browser }}
+          path: test-results/
+          retention-days: 30
+
+  auto-commit:
+    name: 🚀 Auto-commit Test Updates
+    needs: test
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.auto_commit == 'true' || github.event.inputs.auto_commit == null }}
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 🔧 Install dependencies
+        run: npm ci
+        
+      - name: 📥 Download all artifacts
+        uses: actions/download-artifact@v4
+        
+      - name: 🔄 Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          
+      - name: 🤖 Auto-commit test results
+        run: |
+          # Check if there are changes to commit
+          if [[ -n $(git status --porcelain) ]]; then
+            # Generate smart commit message
+            if [[ -d "playwright-report-chromium" || -d "test-results-chromium" ]]; then
+              COMMIT_MSG="test: Update Playwright test results - $(date '+%Y-%m-%d %H:%M')"
+            else
+              COMMIT_MSG="chore: Auto-commit from GitHub Actions - $(date '+%Y-%m-%d %H:%M')"
+            fi
+            
+            echo "📝 Committing with message: $COMMIT_MSG"
+            git add .
+            git commit -m "$COMMIT_MSG"
+            git push
+            
+            echo "✅ Successfully auto-committed test results"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
+
+  deploy-reports:
+    name: 🌐 Deploy Test Reports
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: 📥 Download Playwright reports
+        uses: actions/download-artifact@v4
+        with:
+          pattern: playwright-report-*
+          merge-multiple: true
+          path: ./reports
+          
+      - name: 🌐 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          publish_branch: gh-pages
+          
+  notify:
+    name: 📢 Notify Results
+    needs: [test, auto-commit]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: 📢 Post summary
+        run: |
+          echo "## 🎭 Playwright Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Browser | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|---------|--------|" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ needs.test.result }}" == "success" ]]; then
+            echo "| All Browsers | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| Some Browsers | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔗 Useful Links" >> $GITHUB_STEP_SUMMARY
+          echo "- [Test Reports](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> $GITHUB_STEP_SUMMARY
+          echo "- [Repository](https://github.com/${{ github.repository }})" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ needs.auto-commit.result }}" == "success" ]]; then
+            echo "- ✅ Test results auto-committed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  cleanup:
+    name: 🧹 Cleanup Old Artifacts
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: 🧹 Delete old artifacts
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: |
+            playwright-report-*
+            test-results-*
+          failOnError: false
+          useGlob: true

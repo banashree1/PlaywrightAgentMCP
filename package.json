@@ -10,7 +10,13 @@
     "test:chromium": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
-    "install:browsers": "playwright install --with-deps"
+    "install:browsers": "playwright install --with-deps",
+    "git:auto": "node scripts/git-automation.js auto",
+    "git:commit": "node scripts/git-automation.js commit",
+    "git:push": "node scripts/git-automation.js push",
+    "git:status": "node scripts/git-automation.js status",
+    "test-and-push": "npm test && npm run git:auto",
+    "mcp:start": "node scripts/git-mcp-server.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0"

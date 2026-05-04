@@ -2,7 +2,7 @@ name: 🤖 Playwright Test Automation & Git Sync
 
 on:
   push:
-    branches: [ main, develop, feature/* ]
+    branches: [ main, develop, feature/** ]
   pull_request:
     branches: [ main, develop ]
   schedule:
@@ -19,8 +19,10 @@ on:
         - all
         - smoke
         - regression
-        - vehicle-data
-        - insurance-data
+        - us
+        - dev-69
+        - dev-70
+        - dev-71
       environment:
         description: 'Environment to test against'
         required: false
@@ -69,10 +71,14 @@ jobs:
             npx playwright test --grep "@smoke" --project=${{ matrix.browser }}
           elif [ "${{ github.event.inputs.test_suite }}" == "regression" ]; then
             npx playwright test --grep "@regression" --project=${{ matrix.browser }}
-          elif [ "${{ github.event.inputs.test_suite }}" == "vehicle-data" ]; then
-            npx playwright test tests/vehicle-data --project=${{ matrix.browser }}
-          elif [ "${{ github.event.inputs.test_suite }}" == "insurance-data" ]; then
-            npx playwright test tests/insurance-data --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "us" ]; then
+            npx playwright test tests/us --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "dev-69" ]; then
+            npx playwright test tests/us/dev-69-happy-path.spec.js --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "dev-70" ]; then
+            npx playwright test tests/us/dev-70-vehicle-validation.spec.js --project=${{ matrix.browser }}
+          elif [ "${{ github.event.inputs.test_suite }}" == "dev-71" ]; then
+            npx playwright test tests/us/dev-71-insurant-address-validation.spec.js --project=${{ matrix.browser }}
           else
             npx playwright test --project=${{ matrix.browser }}
           fi

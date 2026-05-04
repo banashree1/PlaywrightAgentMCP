@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "git-automation": {
+      "command": "node",
+      "args": ["scripts/git-mcp-server.js"],
+      "cwd": ".",
+      "env": {
+        "GIT_REPO_PATH": "."
+      },
+      "description": "Git MCP Server for auto-commit and push operations",
+      "capabilities": [
+        "auto-commit",
+        "smart-commit",
+        "push",
+        "status"
+      ]
+    },
+    "jira-automation": {
+      "command": "node",
+      "args": ["jira-mcp-server.mjs"],
+      "cwd": ".",
+      "env": {
+        "JIRA_BASE_URL": "https://banashreerautray.atlassian.net",
+        "JIRA_EMAIL": "banashree.rautray@gmail.com",
+        "JIRA_PROJECT_KEY": "DEV",
+        "JIRA_WORKSPACE": "BanaMCPAgentsAutomobile"
+      },
+      "description": "JIRA MCP Server for automobile insurance testing automation",
+      "capabilities": [
+        "issue-management",
+        "test-integration",
+        "automation-tracking"
+      ]
+    }
+  },
+  "workspace": {
+    "name": "BanaMCPAgentsAutomobile",
+    "description": "MCP Agents workspace for Tricentis automobile insurance application testing",
+    "tools": {
+      "jira": {
+        "enabled": true,
+        "autoLink": true,
+        "testIntegration": true
+      },
+      "playwright": {
+        "enabled": true,
+        "jiraIntegration": true
+      },
+      "git": {
+        "enabled": true,
+        "commitLinking": true
+      }
+    },
+    "project": {
+      "key": "DEV",
+      "boardId": 1,
+      "testPlan": "specs/tricentis-insurance-test-plan.md"
+    }
+  }
+}

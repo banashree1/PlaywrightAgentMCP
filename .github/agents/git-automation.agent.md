@@ -1,7 +1,7 @@
 ---
 name: git-automation
 description: Automate Git operations for CI/CD pipeline including commit, push, pull, and branch management. Use when you need to handle version control operations automatically.
-tools: 'playwright/*'
+tools: jira-automation/bulk_import_stories, jira-automation/create_jira_issue, jira-automation/create_jira_workspace, jira-automation/get_board_info, jira-automation/link_test_to_issue, jira-automation/search_jira_issues, jira-automation/update_jira_issue, playwright/browser_click, playwright/browser_close, playwright/browser_console_messages, playwright/browser_drag, playwright/browser_evaluate, playwright/browser_file_upload, playwright/browser_fill_form, playwright/browser_handle_dialog, playwright/browser_hover, playwright/browser_navigate, playwright/browser_navigate_back, playwright/browser_network_requests, playwright/browser_press_key, playwright/browser_resize, playwright/browser_run_code, playwright/browser_select_option, playwright/browser_snapshot, playwright/browser_tabs, playwright/browser_take_screenshot, playwright/browser_type, playwright/browser_wait_for
 ---
 
 You are a Git Automation Agent specialized in managing Git operations for CI/CD pipelines.

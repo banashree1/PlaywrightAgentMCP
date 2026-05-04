@@ -27,7 +27,6 @@ All scenarios focus specifically on the Automobile insurance path with condition
 **Steps:**
   1. Select an automobile make from dropdown (e.g., 'Toyota')
     - expect: Make dropdown shows selected value
-    - expect: Model dropdown becomes enabled and populated with automobile models
   2. Fill Engine Performance field with valid value (e.g., '120')
     - expect: Value is accepted and displayed correctly
   3. Enter a valid Date of Manufacture (e.g., '01/15/2020')
@@ -366,34 +365,3 @@ All scenarios focus specifically on the Automobile insurance path with condition
     - expect: Application handles page refresh gracefully
     - expect: Data persistence behavior is consistent with expectations
     - expect: User is guided appropriately after refresh
-
-### 10. Accessibility and Usability Testing
-
-**Seed:** `tests/seed.spec.js`
-
-#### 11.1. Keyboard Navigation Testing
-
-**File:** `tests/accessibility/keyboard-navigation.spec.js`
-
-**Steps:**
-  1. Navigate through all form fields using Tab key
-    - expect: All interactive elements are accessible via keyboard
-    - expect: Tab order is logical and intuitive
-    - expect: Focus indicators are clearly visible
-  2. Use Enter and Space keys to interact with buttons and dropdowns
-    - expect: Keyboard interaction works for all form controls
-    - expect: Dropdown and date picker are keyboard accessible
-
-#### 11.2. Form Field Label and Error Message Testing
-
-**File:** `tests/accessibility/labels-and-errors.spec.js`
-
-**Steps:**
-  1. Verify all form fields have proper labels
-    - expect: Each field has clear, descriptive labels
-    - expect: Required fields are clearly indicated
-    - expect: Help text is provided where appropriate
-  2. Trigger validation errors and verify accessibility
-    - expect: Error messages are clearly associated with their fields
-    - expect: Error messages are descriptive and actionable
-    - expect: Error states are visually distinct

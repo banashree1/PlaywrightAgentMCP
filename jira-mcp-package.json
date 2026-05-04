@@ -2,25 +2,17 @@
   "name": "jira-mcp-server",
   "version": "1.0.0",
   "description": "JIRA MCP Server for BanaMCPAgentsAutomobile workspace",
+  "type": "module",
   "main": "jira-mcp-server.mjs",
   "scripts": {
     "start": "node jira-mcp-server.mjs",
     "dev": "node --inspect jira-mcp-server.mjs",
-    "setup": "node setup-jira-workspace.mjs",
-    "test": "npx playwright test",
-    "test:headed": "npx playwright test --headed",
-    "test:ui": "npx playwright test --ui",
-    "test:report": "npx playwright show-report",
-    "git:auto": "node scripts/git-automation.js auto",
-    "git:status": "node scripts/git-automation.js status",
-    "git:commit": "node scripts/git-automation.js commit"
+    "setup": "node setup-jira-workspace.mjs"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
-    "node-fetch": "^3.3.2"
+    "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.50.0",
     "@types/node": "^20.0.0"
   },
   "keywords": [

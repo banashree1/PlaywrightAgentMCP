@@ -1,0 +1,45 @@
+{
+  "testName": "DEV-69 Happy Path End-to-End Complete Automobile Insurance Flow",
+  "applicationUrl": "https://sampleapp.tricentis.com/101/app.php",
+  "vehicleData": {
+    "make": "Toyota",
+    "model": "Corolla",
+    "enginePerformance": "120",
+    "dateOfManufacture": "01/15/2020",
+    "numberOfSeats": "5",
+    "fuel": "Petrol",
+    "listPrice": "25000",
+    "licensePlateNumber": "DEV69",
+    "annualMileage": "12000"
+  },
+  "insurantData": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "01/01/1990",
+    "gender": "male",
+    "hobbies": ["Speeding"],
+    "streetAddress": "221B Baker Street",
+    "country": "India",
+    "zipCode": "560001",
+    "city": "Bengaluru",
+    "occupation": "Employee"
+  },
+  "productData": {
+    "startDateMonthsFromNow": 2,
+    "insuranceSumIndex": 1,
+    "meritRating": "Bonus 9",
+    "damageInsuranceIndex": 1,
+    "euroProtection": true,
+    "courtesyCarIndex": 1
+  },
+  "priceOptionData": {
+    "selectFirstRadio": true
+  },
+  "sendQuoteData": {
+    "email": "test.dev69@example.com",
+    "phone": "9876543210",
+    "username": "dev69_user",
+    "password": "Pass@1234",
+    "confirmPassword": "Pass@1234"
+  }
+}

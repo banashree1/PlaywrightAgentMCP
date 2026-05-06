@@ -1,0 +1,313 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global Navigation Menu" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Open menu" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+          - link "Homepage (g then d)" [ref=e15] [cursor=pointer]:
+            - /url: /
+            - img [ref=e16]
+        - generic [ref=e18]:
+          - navigation "Breadcrumbs" [ref=e19]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "banashree1" [ref=e22] [cursor=pointer]:
+                  - /url: /banashree1
+                  - generic [ref=e23]: banashree1
+              - listitem [ref=e24]:
+                - link "PlaywrightAgentMCP" [ref=e25] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP
+                  - generic [ref=e26]: PlaywrightAgentMCP
+                  - img [ref=e27]
+          - button "Search or jump to…" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic:
+                - img
+              - generic [ref=e33]:
+                - generic:
+                  - text: Type
+                  - generic: /
+                  - text: to search
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - link "Chat with Copilot" [ref=e40] [cursor=pointer]:
+                  - /url: /copilot
+                  - img [ref=e41]
+                - button "Open Copilot…" [ref=e45] [cursor=pointer]:
+                  - generic:
+                    - img
+              - button "Open agents panel" [ref=e384] [cursor=pointer]:
+                - generic [ref=e385]:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - button "Create new..." [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]:
+                - generic:
+                  - img
+              - generic:
+                - img
+            - generic [ref=e51]:
+              - link "All issues" [ref=e52] [cursor=pointer]:
+                - /url: /issues
+                - img [ref=e53]
+              - link "All pull requests" [ref=e56] [cursor=pointer]:
+                - /url: /pulls
+                - img [ref=e57]
+              - link "All repositories" [ref=e59] [cursor=pointer]:
+                - /url: /repos
+                - img [ref=e60]
+          - button "Open user navigation menu" [ref=e66] [cursor=pointer]:
+            - img "User avatar" [ref=e67]
+      - heading "Repository navigation" [level=2] [ref=e68]
+      - navigation "Repository" [ref=e69]:
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - link "Code" [ref=e72] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP
+              - img [ref=e74]
+              - generic [ref=e76]: Code
+          - listitem [ref=e77]:
+            - link "Issues" [ref=e78] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/issues
+              - img [ref=e80]
+              - generic [ref=e83]: Issues
+          - listitem [ref=e84]:
+            - link "Pull requests" [ref=e85] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/pulls
+              - img [ref=e87]
+              - generic [ref=e89]: Pull requests
+          - listitem [ref=e90]:
+            - link "Agents" [ref=e91] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/agents?author=banashree1
+              - img [ref=e93]
+              - generic [ref=e96]: Agents
+          - listitem [ref=e97]:
+            - link "Actions" [ref=e98] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/actions
+              - img [ref=e100]
+              - generic [ref=e102]: Actions
+          - listitem [ref=e103]:
+            - link "Projects" [ref=e104] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/projects
+              - img [ref=e106]
+              - generic [ref=e108]: Projects
+          - listitem [ref=e109]:
+            - link "Security and quality" [ref=e110] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/security
+              - img [ref=e112]
+              - generic [ref=e114]: Security and quality
+          - listitem [ref=e115]:
+            - link "Insights" [ref=e116] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/network/dependencies
+              - img [ref=e118]
+              - generic [ref=e120]: Insights
+          - listitem [ref=e121]:
+            - link "Settings" [ref=e122] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/settings
+              - img [ref=e124]
+              - generic [ref=e126]: Settings
+  - main [ref=e130]:
+    - generic [ref=e138]:
+      - generic [ref=e140]:
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - heading "Collapse file tree" [level=2] [ref=e146]:
+                - button "Collapse file tree" [expanded] [ref=e147] [cursor=pointer]:
+                  - img [ref=e148]
+              - heading "Files" [level=2] [ref=e151]
+            - generic [ref=e152]:
+              - button "main branch" [ref=e154] [cursor=pointer]:
+                - generic [ref=e155]:
+                  - generic [ref=e157]:
+                    - img [ref=e159]
+                    - generic [ref=e162]: main
+                  - generic:
+                    - img
+              - generic [ref=e163]:
+                - link "Add file" [ref=e164] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/new/main
+                  - img [ref=e165]
+                - button "Search this repository (forward slash)" [ref=e167] [cursor=pointer]:
+                  - img [ref=e168]
+          - generic [ref=e171]:
+            - img [ref=e173]
+            - combobox "Go to file" [ref=e175]
+            - generic [ref=e178]:
+              - generic [ref=e179]: t
+              - generic [ref=e180]: T
+          - navigation "File Tree Navigation" [ref=e186]:
+            - tree "Files" [ref=e188]:
+              - treeitem ".github" [level=1] [ref=e189]:
+                - generic [ref=e190] [cursor=pointer]:
+                  - img [ref=e192]
+                  - generic [ref=e194]:
+                    - img [ref=e198]
+                    - generic [ref=e200]: .github
+              - treeitem ".playwright-mcp" [level=1] [ref=e201]:
+                - generic [ref=e202] [cursor=pointer]:
+                  - img [ref=e204]
+                  - generic [ref=e206]:
+                    - img [ref=e210]
+                    - generic [ref=e212]: .playwright-mcp
+              - treeitem "docs" [level=1] [ref=e213]:
+                - generic [ref=e214] [cursor=pointer]:
+                  - img [ref=e216]
+                  - generic [ref=e218]:
+                    - img [ref=e222]
+                    - generic [ref=e224]: docs
+              - treeitem "knowledge-base" [level=1] [ref=e225]:
+                - generic [ref=e226] [cursor=pointer]:
+                  - img [ref=e228]
+                  - generic [ref=e230]:
+                    - img [ref=e234]
+                    - generic [ref=e236]: knowledge-base
+              - treeitem "scripts" [level=1] [ref=e237]:
+                - generic [ref=e238] [cursor=pointer]:
+                  - img [ref=e240]
+                  - generic [ref=e242]:
+                    - img [ref=e246]
+                    - generic [ref=e248]: scripts
+              - treeitem "specs" [level=1] [ref=e249]:
+                - generic [ref=e250] [cursor=pointer]:
+                  - img [ref=e252]
+                  - generic [ref=e254]:
+                    - img [ref=e258]
+                    - generic [ref=e260]: specs
+              - treeitem "tests" [level=1] [ref=e261]:
+                - generic [ref=e262] [cursor=pointer]:
+                  - img [ref=e264]
+                  - generic [ref=e266]:
+                    - img [ref=e270]
+                    - generic [ref=e272]: tests
+              - treeitem ".gitignore" [level=1] [ref=e273]:
+                - generic [ref=e275] [cursor=pointer]:
+                  - img [ref=e278]
+                  - generic [ref=e280]: .gitignore
+              - treeitem "JIRA_MCP_README.md" [level=1] [ref=e281]:
+                - generic [ref=e283] [cursor=pointer]:
+                  - img [ref=e286]
+                  - generic [ref=e288]: JIRA_MCP_README.md
+              - treeitem "MCPGITPLAYWRIGHT" [level=1] [ref=e289]:
+                - generic [ref=e291] [cursor=pointer]:
+                  - img [ref=e294]
+                  - generic [ref=e296]: MCPGITPLAYWRIGHT
+              - treeitem "MCPGITPLAYWRIGHT.pub" [level=1] [ref=e297]:
+                - generic [ref=e299] [cursor=pointer]:
+                  - img [ref=e302]
+                  - generic [ref=e304]: MCPGITPLAYWRIGHT.pub
+              - treeitem "jira-mcp-package.json" [level=1] [ref=e305]:
+                - generic [ref=e307] [cursor=pointer]:
+                  - img [ref=e310]
+                  - generic [ref=e312]: jira-mcp-package.json
+              - treeitem "jira-mcp-server.mjs" [level=1] [ref=e313]:
+                - generic [ref=e315] [cursor=pointer]:
+                  - img [ref=e318]
+                  - generic [ref=e320]: jira-mcp-server.mjs
+              - treeitem "mcp-config.json" [level=1] [ref=e321]:
+                - generic [ref=e323] [cursor=pointer]:
+                  - img [ref=e326]
+                  - generic [ref=e328]: mcp-config.json
+              - treeitem "package-lock.json" [level=1] [ref=e329]:
+                - generic [ref=e331] [cursor=pointer]:
+                  - img [ref=e334]
+                  - generic [ref=e336]: package-lock.json
+              - treeitem "package.json" [level=1] [ref=e337]:
+                - generic [ref=e339] [cursor=pointer]:
+                  - img [ref=e342]
+                  - generic [ref=e344]: package.json
+              - treeitem "playwright.config.js" [level=1] [ref=e345]:
+                - generic [ref=e347] [cursor=pointer]:
+                  - img [ref=e350]
+                  - generic [ref=e352]: playwright.config.js
+              - treeitem "setup-jira-workspace.mjs" [level=1] [ref=e353]:
+                - generic [ref=e355] [cursor=pointer]:
+                  - img [ref=e358]
+                  - generic [ref=e360]: setup-jira-workspace.mjs
+              - treeitem "test-jira-connection.mjs" [level=1] [ref=e361]:
+                - generic [ref=e363] [cursor=pointer]:
+                  - img [ref=e366]
+                  - generic [ref=e368]: test-jira-connection.mjs
+        - slider "Draggable pane splitter" [ref=e370]
+      - generic [ref=e375]:
+        - heading "Creating a new file in PlaywrightAgentMCP" [level=1] [ref=e386]
+        - generic [ref=e387]:
+          - generic [ref=e389]:
+            - navigation "Breadcrumbs" [ref=e391]:
+              - heading "Breadcrumbs" [level=2] [ref=e392]
+              - list [ref=e393]:
+                - listitem [ref=e394]:
+                  - link "PlaywrightAgentMCP" [ref=e395] [cursor=pointer]:
+                    - /url: /banashree1/PlaywrightAgentMCP/tree/main
+            - generic [ref=e396]:
+              - generic [ref=e397]: /
+              - textbox "File name" [ref=e399]:
+                - /placeholder: Name your file...
+                - text: README.md
+              - generic [ref=e400]: in
+              - link "main" [ref=e401] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/tree/main
+          - generic [ref=e402]:
+            - link "Cancel changes" [ref=e403] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/tree/main
+              - generic [ref=e405]: Cancel changes
+            - button "Commit changes..." [disabled] [ref=e406]:
+              - generic [ref=e408]: Commit changes...
+        - generic [ref=e410]:
+          - generic [ref=e412]:
+            - list "Edit mode" [ref=e413]:
+              - listitem [ref=e414]:
+                - button "Edit" [ref=e415] [cursor=pointer]:
+                  - generic [ref=e417]: Edit
+              - listitem [ref=e418]:
+                - button "Preview" [ref=e419] [cursor=pointer]:
+                  - generic [ref=e421]: Preview
+            - generic [ref=e423]:
+              - generic [ref=e424]:
+                - generic [ref=e425] [cursor=pointer]: Indent mode
+                - generic [ref=e426]:
+                  - combobox "Indent mode" [ref=e427] [cursor=pointer]:
+                    - option "Spaces" [selected]
+                    - option "Tabs"
+                  - img
+              - generic [ref=e428]:
+                - generic [ref=e429] [cursor=pointer]: Indent size
+                - generic [ref=e430]:
+                  - combobox "Indent size" [ref=e431] [cursor=pointer]:
+                    - option "2" [selected]
+                    - option "4"
+                    - option "8"
+                  - img
+              - generic [ref=e432]:
+                - generic [ref=e433] [cursor=pointer]: Line wrap mode
+                - generic [ref=e434]:
+                  - combobox "Line wrap mode" [ref=e435] [cursor=pointer]:
+                    - option "No wrap" [selected]
+                    - option "Soft wrap"
+                  - img
+          - generic [ref=e437]:
+            - generic [ref=e438]: Editing file contents
+            - generic [ref=e440]:
+              - region "Editing file contents" [ref=e441]:
+                - generic [ref=e444]: "1"
+                - textbox "Editing file contents Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page." [active] [ref=e445]:
+                  - generic [ref=e446]:
+                    - generic: Enter file contents here
+              - generic [ref=e448]:
+                - text: Use
+                - generic [ref=e449]: Control + Shift + m
+                - text: to toggle the
+                - generic [ref=e450]: tab
+                - text: key moving focus. Alternatively, use
+                - generic [ref=e451]: esc
+                - text: then
+                - generic [ref=e452]: tab
+                - text: to move to the next interactive element on the page.

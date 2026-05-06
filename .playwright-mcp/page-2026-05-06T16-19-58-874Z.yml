@@ -1,0 +1,519 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global Navigation Menu" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Open menu" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+          - link "Homepage (g then d)" [ref=e15] [cursor=pointer]:
+            - /url: /
+            - img [ref=e16]
+        - generic [ref=e18]:
+          - navigation "Breadcrumbs" [ref=e19]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "banashree1" [ref=e22] [cursor=pointer]:
+                  - /url: /banashree1
+                  - generic [ref=e23]: banashree1
+              - listitem [ref=e24]:
+                - link "PlaywrightAgentMCP" [ref=e25] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP
+                  - generic [ref=e26]: PlaywrightAgentMCP
+                  - img [ref=e27]
+          - button "Search or jump to…" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic:
+                - img
+              - generic [ref=e33]:
+                - generic:
+                  - text: Type
+                  - generic: /
+                  - text: to search
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - link "Chat with Copilot" [ref=e40] [cursor=pointer]:
+                  - /url: /copilot
+                  - img [ref=e41]
+                - button "Open Copilot…" [ref=e45] [cursor=pointer]:
+                  - generic:
+                    - img
+              - button "Open agents panel" [ref=e46] [cursor=pointer]:
+                - generic [ref=e47]:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - button "Create new..." [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]:
+                - generic:
+                  - img
+              - generic:
+                - img
+            - generic [ref=e51]:
+              - link "All issues" [ref=e52] [cursor=pointer]:
+                - /url: /issues
+                - img [ref=e53]
+              - link "All pull requests" [ref=e56] [cursor=pointer]:
+                - /url: /pulls
+                - img [ref=e57]
+              - link "All repositories" [ref=e59] [cursor=pointer]:
+                - /url: /repos
+                - img [ref=e60]
+          - link "You have no unread notifications (g then n)" [ref=e62] [cursor=pointer]:
+            - /url: /notifications
+            - img [ref=e63]
+          - button "Open user navigation menu" [ref=e66] [cursor=pointer]:
+            - img "User avatar" [ref=e67]
+      - heading "Repository navigation" [level=2] [ref=e68]
+      - navigation "Repository" [ref=e69]:
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - link "Code" [ref=e72] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP
+              - img [ref=e74]
+              - generic [ref=e76]: Code
+          - listitem [ref=e77]:
+            - link "Issues" [ref=e78] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/issues
+              - img [ref=e80]
+              - generic [ref=e83]: Issues
+          - listitem [ref=e84]:
+            - link "Pull requests" [ref=e85] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/pulls
+              - img [ref=e87]
+              - generic [ref=e89]: Pull requests
+          - listitem [ref=e90]:
+            - link "Agents" [ref=e91] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/agents?author=banashree1
+              - img [ref=e93]
+              - generic [ref=e96]: Agents
+          - listitem [ref=e97]:
+            - link "Actions" [ref=e98] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/actions
+              - img [ref=e100]
+              - generic [ref=e102]: Actions
+          - listitem [ref=e103]:
+            - link "Projects" [ref=e104] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/projects
+              - img [ref=e106]
+              - generic [ref=e108]: Projects
+          - listitem [ref=e109]:
+            - link "Security and quality" [ref=e110] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/security
+              - img [ref=e112]
+              - generic [ref=e114]: Security and quality
+          - listitem [ref=e115]:
+            - link "Insights" [ref=e116] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/network/dependencies
+              - img [ref=e118]
+              - generic [ref=e120]: Insights
+          - listitem [ref=e121]:
+            - link "Settings" [ref=e122] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/settings
+              - img [ref=e124]
+              - generic [ref=e126]: Settings
+  - main [ref=e130]:
+    - generic [ref=e143]:
+      - generic [ref=e146]:
+        - generic [ref=e148]:
+          - generic [ref=e150]:
+            - img "Owner avatar" [ref=e151]
+            - strong [ref=e152]:
+              - link "PlaywrightAgentMCP" [ref=e153] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP
+            - generic [ref=e154]: Private
+          - generic [ref=e155]:
+            - list:
+              - listitem
+              - listitem [ref=e156]:
+                - generic [ref=e157]:
+                  - button "Fork 0" [disabled] [ref=e158]:
+                    - img [ref=e159]
+                    - text: Fork
+                    - generic "0" [ref=e161]
+                  - group [ref=e162]:
+                    - button "See your forks of this repository" [ref=e163] [cursor=pointer]:
+                      - img [ref=e164]
+              - listitem [ref=e166]:
+                - generic [ref=e168]:
+                  - button "Star this repository (0)" [ref=e170] [cursor=pointer]:
+                    - img [ref=e171]
+                    - text: Star
+                    - generic "0 users starred this repository" [ref=e173]: "0"
+                  - button "Add this repository to a list" [ref=e177] [cursor=pointer]:
+                    - img
+        - heading "banashree1/PlaywrightAgentMCP" [level=1] [ref=e180]
+      - generic [ref=e181]:
+        - generic [ref=e184]:
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - button "main branch" [ref=e188] [cursor=pointer]:
+                - generic [ref=e189]:
+                  - generic [ref=e191]:
+                    - img [ref=e193]
+                    - generic [ref=e196]: main
+                  - generic:
+                    - img
+              - generic [ref=e197]:
+                - link "Branches" [ref=e198] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/branches
+                  - generic [ref=e199]:
+                    - generic:
+                      - img
+                    - generic [ref=e200]: Branches
+                - link "Tags" [ref=e201] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/tags
+                  - generic [ref=e202]:
+                    - generic:
+                      - img
+                    - generic [ref=e203]: Tags
+            - generic [ref=e204]:
+              - generic [ref=e206]:
+                - heading "Add file" [level=2] [ref=e207]
+                - button "Add file" [ref=e208] [cursor=pointer]:
+                  - generic [ref=e211]:
+                    - text: Add file
+                    - img [ref=e212]
+              - button "New agent session" [ref=e214] [cursor=pointer]:
+                - img [ref=e215]
+              - button "Code" [ref=e218] [cursor=pointer]:
+                - generic [ref=e219]:
+                  - generic:
+                    - img
+                  - generic [ref=e220]: Code
+                  - generic:
+                    - img
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - heading "Folders and files" [level=2] [ref=e223]
+              - table "Folders and files" [ref=e224]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e225]:
+                  - row "Latest commit History 7 Commits" [ref=e226]:
+                    - cell "Latest commit History 7 Commits" [ref=e227]:
+                      - generic [ref=e228]:
+                        - heading "Latest commit" [level=2] [ref=e229]
+                        - generic [ref=e232]:
+                          - heading "History" [level=2] [ref=e233]
+                          - link "7 Commits" [ref=e234] [cursor=pointer]:
+                            - /url: /banashree1/PlaywrightAgentMCP/commits/main/
+                            - generic [ref=e235]:
+                              - generic:
+                                - img
+                              - generic [ref=e236]: 7 Commits
+                  - row ".github, (Directory)" [ref=e237]:
+                    - cell ".github, (Directory)" [ref=e238]:
+                      - generic [ref=e239]:
+                        - img [ref=e240]
+                        - link ".github, (Directory)" [ref=e245] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/.github
+                          - text: .github
+                    - cell [ref=e246]
+                    - cell [ref=e248]
+                  - row ".playwright-mcp, (Directory)" [ref=e251]:
+                    - cell ".playwright-mcp, (Directory)" [ref=e252]:
+                      - generic [ref=e253]:
+                        - img [ref=e254]
+                        - link ".playwright-mcp, (Directory)" [ref=e259] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/.playwright-mcp
+                          - text: .playwright-mcp
+                    - cell [ref=e260]
+                    - cell [ref=e262]
+                  - row "docs, (Directory)" [ref=e265]:
+                    - cell "docs, (Directory)" [ref=e266]:
+                      - generic [ref=e267]:
+                        - img [ref=e268]
+                        - link "docs, (Directory)" [ref=e273] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/docs
+                          - text: docs
+                    - cell [ref=e274]
+                    - cell [ref=e276]
+                  - row "knowledge-base, (Directory)" [ref=e279]:
+                    - cell "knowledge-base, (Directory)" [ref=e280]:
+                      - generic [ref=e281]:
+                        - img [ref=e282]
+                        - link "knowledge-base, (Directory)" [ref=e287] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/knowledge-base
+                          - text: knowledge-base
+                    - cell [ref=e288]
+                    - cell [ref=e290]
+                  - row "scripts, (Directory)" [ref=e293]:
+                    - cell "scripts, (Directory)" [ref=e294]:
+                      - generic [ref=e295]:
+                        - img [ref=e296]
+                        - link "scripts, (Directory)" [ref=e301] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/scripts
+                          - text: scripts
+                    - cell [ref=e302]
+                    - cell [ref=e304]
+                  - row "specs, (Directory)" [ref=e307]:
+                    - cell "specs, (Directory)" [ref=e308]:
+                      - generic [ref=e309]:
+                        - img [ref=e310]
+                        - link "specs, (Directory)" [ref=e315] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/specs
+                          - text: specs
+                    - cell [ref=e316]
+                    - cell [ref=e318]
+                  - row "tests/us, (Directory)" [ref=e321]:
+                    - cell "tests/us, (Directory)" [ref=e322]:
+                      - generic [ref=e323]:
+                        - img [ref=e324]
+                        - link "tests/us, (Directory)" [ref=e329] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/tests/us
+                          - text: tests/us
+                    - cell [ref=e330]
+                    - cell [ref=e332]
+                  - row ".gitignore, (File)" [ref=e335]:
+                    - cell ".gitignore, (File)" [ref=e336]:
+                      - generic [ref=e337]:
+                        - img [ref=e338]
+                        - link ".gitignore, (File)" [ref=e343] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/.gitignore
+                          - text: .gitignore
+                    - cell [ref=e344]
+                    - cell [ref=e346]
+                  - row "JIRA_MCP_README.md, (File)" [ref=e349]:
+                    - cell "JIRA_MCP_README.md, (File)" [ref=e350]:
+                      - generic [ref=e351]:
+                        - img [ref=e352]
+                        - link "JIRA_MCP_README.md, (File)" [ref=e357] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/JIRA_MCP_README.md
+                          - text: JIRA_MCP_README.md
+                    - cell [ref=e358]
+                    - cell [ref=e360]
+                  - row "MCPGITPLAYWRIGHT, (File)" [ref=e363]:
+                    - cell "MCPGITPLAYWRIGHT, (File)" [ref=e364]:
+                      - generic [ref=e365]:
+                        - img [ref=e366]
+                        - link "MCPGITPLAYWRIGHT, (File)" [ref=e371] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/MCPGITPLAYWRIGHT
+                          - text: MCPGITPLAYWRIGHT
+                    - cell [ref=e372]
+                    - cell [ref=e374]
+                  - row "MCPGITPLAYWRIGHT.pub, (File)" [ref=e377]:
+                    - cell "MCPGITPLAYWRIGHT.pub, (File)" [ref=e378]:
+                      - generic [ref=e379]:
+                        - img [ref=e380]
+                        - link "MCPGITPLAYWRIGHT.pub, (File)" [ref=e385] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/MCPGITPLAYWRIGHT.pub
+                          - text: MCPGITPLAYWRIGHT.pub
+                    - cell [ref=e386]
+                    - cell [ref=e388]
+                  - row "jira-mcp-package.json, (File)" [ref=e391]:
+                    - cell "jira-mcp-package.json, (File)" [ref=e392]:
+                      - generic [ref=e393]:
+                        - img [ref=e394]
+                        - link "jira-mcp-package.json, (File)" [ref=e399] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/jira-mcp-package.json
+                          - text: jira-mcp-package.json
+                    - cell [ref=e400]
+                    - cell [ref=e402]
+                  - row "jira-mcp-server.mjs, (File)" [ref=e405]:
+                    - cell "jira-mcp-server.mjs, (File)" [ref=e406]:
+                      - generic [ref=e407]:
+                        - img [ref=e408]
+                        - link "jira-mcp-server.mjs, (File)" [ref=e413] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/jira-mcp-server.mjs
+                          - text: jira-mcp-server.mjs
+                    - cell [ref=e414]
+                    - cell [ref=e416]
+                  - row "mcp-config.json, (File)" [ref=e419]:
+                    - cell "mcp-config.json, (File)" [ref=e420]:
+                      - generic [ref=e421]:
+                        - img [ref=e422]
+                        - link "mcp-config.json, (File)" [ref=e427] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/mcp-config.json
+                          - text: mcp-config.json
+                    - cell [ref=e428]
+                    - cell [ref=e430]
+                  - row "package-lock.json, (File)" [ref=e433]:
+                    - cell "package-lock.json, (File)" [ref=e434]:
+                      - generic [ref=e435]:
+                        - img [ref=e436]
+                        - link "package-lock.json, (File)" [ref=e441] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/package-lock.json
+                          - text: package-lock.json
+                    - cell [ref=e442]
+                    - cell [ref=e444]
+                  - row "package.json, (File)" [ref=e447]:
+                    - cell "package.json, (File)" [ref=e448]:
+                      - generic [ref=e449]:
+                        - img [ref=e450]
+                        - link "package.json, (File)" [ref=e455] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/package.json
+                          - text: package.json
+                    - cell [ref=e456]
+                    - cell [ref=e458]
+                  - row "playwright.config.js, (File)" [ref=e461]:
+                    - cell "playwright.config.js, (File)" [ref=e462]:
+                      - generic [ref=e463]:
+                        - img [ref=e464]
+                        - link "playwright.config.js, (File)" [ref=e469] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/playwright.config.js
+                          - text: playwright.config.js
+                    - cell [ref=e470]
+                    - cell [ref=e472]
+                  - row "setup-jira-workspace.mjs, (File)" [ref=e475]:
+                    - cell "setup-jira-workspace.mjs, (File)" [ref=e476]:
+                      - generic [ref=e477]:
+                        - img [ref=e478]
+                        - link "setup-jira-workspace.mjs, (File)" [ref=e483] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/setup-jira-workspace.mjs
+                          - text: setup-jira-workspace.mjs
+                    - cell [ref=e484]
+                    - cell [ref=e486]
+                  - row "test-jira-connection.mjs, (File)" [ref=e489]:
+                    - cell "test-jira-connection.mjs, (File)" [ref=e490]:
+                      - generic [ref=e491]:
+                        - img [ref=e492]
+                        - link "test-jira-connection.mjs, (File)" [ref=e497] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/test-jira-connection.mjs
+                          - text: test-jira-connection.mjs
+                    - cell [ref=e498]
+                    - cell [ref=e500]
+            - generic [ref=e504]:
+              - generic [ref=e505]:
+                - heading "Repository files navigation" [level=2] [ref=e506]
+                - navigation "Repository files" [ref=e507]:
+                  - list [ref=e508]:
+                    - listitem [ref=e509]:
+                      - link "README" [ref=e510] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e512]
+                        - generic [ref=e514]: README
+              - generic [ref=e516]:
+                - img [ref=e518]
+                - heading "Add a README" [level=2] [ref=e520]
+                - paragraph [ref=e521]: Add a README with an overview of your project.
+                - link "Add a README" [ref=e523] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/new/main?filename=README.md
+                  - generic [ref=e525]: Add a README
+        - generic [ref=e529]:
+          - generic [ref=e531]:
+            - group:
+              - button "Edit repository metadata" [ref=e532] [cursor=pointer]:
+                - img "Edit repository metadata" [ref=e534]
+            - generic [ref=e536]:
+              - heading "About" [level=2] [ref=e537]
+              - generic [ref=e538]: No description, website, or topics provided.
+              - link "Activity" [ref=e540] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/activity
+                - img [ref=e541]
+                - text: Activity
+              - heading "Stars" [level=3] [ref=e543]
+              - link "0 stars" [ref=e545] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/stargazers
+                - img [ref=e546]
+                - strong [ref=e548]: "0"
+                - text: stars
+              - heading "Watchers" [level=3] [ref=e549]
+              - link "0 watching" [ref=e551] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/watchers
+                - img [ref=e552]
+                - strong [ref=e554]: "0"
+                - text: watching
+              - heading "Forks" [level=3] [ref=e555]
+              - link "0 forks" [ref=e557] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/forks
+                - img [ref=e558]
+                - strong [ref=e560]: "0"
+                - text: forks
+          - generic [ref=e562]:
+            - heading "Releases" [level=2] [ref=e563]:
+              - link "Releases" [ref=e564] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/releases
+            - generic [ref=e565]: No releases published
+            - link "Create a new release" [ref=e567] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/releases/new
+          - generic [ref=e569]:
+            - heading "Deployments 42" [level=2] [ref=e570]:
+              - link "Deployments 42" [ref=e571] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/deployments
+                - text: Deployments
+                - generic "42" [ref=e572]
+            - list [ref=e573]:
+              - listitem [ref=e574]:
+                - img [ref=e575]
+                - link "github-pages" [ref=e577] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/deployments/github-pages
+            - link "+ 41 deployments" [ref=e579] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/deployments
+          - generic [ref=e581]:
+            - heading "Packages" [level=2] [ref=e582]:
+              - link "Packages" [ref=e583] [cursor=pointer]:
+                - /url: /users/banashree1/packages?repo_name=PlaywrightAgentMCP
+            - generic [ref=e584]:
+              - text: No packages published
+              - link "Publish your first package" [ref=e585] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/packages
+          - generic [ref=e587]:
+            - heading "Contributors 1" [level=2] [ref=e588]:
+              - link "Contributors 1" [ref=e589] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/graphs/contributors
+                - text: Contributors
+                - generic "1" [ref=e590]
+            - list [ref=e591]:
+              - listitem [ref=e592]:
+                - link "@banashree1" [ref=e593] [cursor=pointer]:
+                  - /url: https://github.com/banashree1
+                  - img "@banashree1" [ref=e594]
+                - link "banashree1" [ref=e596] [cursor=pointer]:
+                  - /url: https://github.com/banashree1
+                  - strong [ref=e597]: banashree1
+          - generic [ref=e599]:
+            - heading "Languages" [level=2] [ref=e600]
+            - list [ref=e604]:
+              - listitem [ref=e605]:
+                - link "JavaScript 100.0%" [ref=e606] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/search?l=javascript
+                  - img [ref=e607]
+                  - generic [ref=e609]: JavaScript
+                  - generic [ref=e610]: 100.0%
+  - contentinfo [ref=e612]:
+    - heading "Footer" [level=2] [ref=e613]
+    - generic [ref=e614]:
+      - generic [ref=e615]:
+        - link "GitHub Homepage" [ref=e616] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e617]
+        - generic [ref=e619]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e620]:
+        - heading "Footer navigation" [level=3] [ref=e621]
+        - list "Footer navigation" [ref=e622]:
+          - listitem [ref=e623]:
+            - link "Terms" [ref=e624] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e625]:
+            - link "Privacy" [ref=e626] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e627]:
+            - link "Security" [ref=e628] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e629]:
+            - link "Status" [ref=e630] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e631]:
+            - link "Community" [ref=e632] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e633]:
+            - link "Docs" [ref=e634] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e635]:
+            - link "Contact" [ref=e636] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e637]:
+            - button "Manage cookies" [ref=e639] [cursor=pointer]
+          - listitem [ref=e640]:
+            - button "Do not share my personal information" [ref=e642] [cursor=pointer]

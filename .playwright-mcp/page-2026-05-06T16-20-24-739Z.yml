@@ -1,0 +1,625 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global Navigation Menu" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Open menu" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+          - link "Homepage (g then d)" [ref=e15] [cursor=pointer]:
+            - /url: /
+            - img [ref=e16]
+        - generic [ref=e18]:
+          - navigation "Breadcrumbs" [ref=e19]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "banashree1" [ref=e22] [cursor=pointer]:
+                  - /url: /banashree1
+                  - generic [ref=e23]: banashree1
+              - listitem [ref=e24]:
+                - link "PlaywrightAgentMCP" [ref=e25] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP
+                  - generic [ref=e26]: PlaywrightAgentMCP
+                  - img [ref=e27]
+          - button "Search or jump to…" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic:
+                - img
+              - generic [ref=e33]:
+                - generic:
+                  - text: Type
+                  - generic: /
+                  - text: to search
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - link "Chat with Copilot" [ref=e40] [cursor=pointer]:
+                  - /url: /copilot
+                  - img [ref=e41]
+                - button "Open Copilot…" [ref=e45] [cursor=pointer]:
+                  - generic:
+                    - img
+              - button "Open agents panel" [ref=e645] [cursor=pointer]:
+                - generic [ref=e646]:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - button "Create new..." [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]:
+                - generic:
+                  - img
+              - generic:
+                - img
+            - generic [ref=e51]:
+              - link "All issues" [ref=e52] [cursor=pointer]:
+                - /url: /issues
+                - img [ref=e53]
+              - link "All pull requests" [ref=e56] [cursor=pointer]:
+                - /url: /pulls
+                - img [ref=e57]
+              - link "All repositories" [ref=e59] [cursor=pointer]:
+                - /url: /repos
+                - img [ref=e60]
+          - button "Open user navigation menu" [ref=e66] [cursor=pointer]:
+            - img "User avatar" [ref=e67]
+      - heading "Repository navigation" [level=2] [ref=e68]
+      - navigation "Repository" [ref=e69]:
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - link "Code" [ref=e72] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP
+              - img [ref=e74]
+              - generic [ref=e76]: Code
+          - listitem [ref=e77]:
+            - link "Issues" [ref=e78] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/issues
+              - img [ref=e80]
+              - generic [ref=e83]: Issues
+          - listitem [ref=e84]:
+            - link "Pull requests" [ref=e85] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/pulls
+              - img [ref=e87]
+              - generic [ref=e89]: Pull requests
+          - listitem [ref=e90]:
+            - link "Agents" [ref=e91] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/agents?author=banashree1
+              - img [ref=e93]
+              - generic [ref=e96]: Agents
+          - listitem [ref=e97]:
+            - link "Actions" [ref=e98] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/actions
+              - img [ref=e100]
+              - generic [ref=e102]: Actions
+          - listitem [ref=e103]:
+            - link "Projects" [ref=e104] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/projects
+              - img [ref=e106]
+              - generic [ref=e108]: Projects
+          - listitem [ref=e109]:
+            - link "Security and quality" [ref=e110] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/security
+              - img [ref=e112]
+              - generic [ref=e114]: Security and quality
+          - listitem [ref=e115]:
+            - link "Insights" [ref=e116] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/network/dependencies
+              - img [ref=e118]
+              - generic [ref=e120]: Insights
+          - listitem [ref=e121]:
+            - link "Settings" [ref=e122] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/settings
+              - img [ref=e124]
+              - generic [ref=e126]: Settings
+  - main [ref=e130]:
+    - generic [ref=e655]:
+      - generic [ref=e658]:
+        - generic [ref=e660]:
+          - generic [ref=e662]:
+            - img "Owner avatar" [ref=e663]
+            - strong [ref=e664]:
+              - link "PlaywrightAgentMCP" [ref=e665] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP
+            - generic [ref=e666]: Private
+          - generic [ref=e667]:
+            - list:
+              - listitem [ref=e668]:
+                - 'button "Watch: Participating in banashree1/PlaywrightAgentMCP" [ref=e671] [cursor=pointer]':
+                  - generic [ref=e672]:
+                    - generic:
+                      - img
+                    - generic [ref=e673]: Watch
+                    - generic:
+                      - generic: "0"
+                      - generic: (0)
+                  - generic:
+                    - img
+              - listitem [ref=e674]:
+                - generic [ref=e675]:
+                  - button "Fork 0" [disabled] [ref=e676]:
+                    - img [ref=e677]
+                    - text: Fork
+                    - generic "0" [ref=e679]
+                  - group [ref=e680]:
+                    - button "See your forks of this repository" [ref=e681] [cursor=pointer]:
+                      - img [ref=e682]
+              - listitem [ref=e684]:
+                - generic [ref=e686]:
+                  - button "Star this repository (0)" [ref=e688] [cursor=pointer]:
+                    - img [ref=e689]
+                    - text: Star
+                    - generic "0 users starred this repository" [ref=e691]: "0"
+                  - button "Add this repository to a list" [ref=e695] [cursor=pointer]:
+                    - img
+        - heading "banashree1/PlaywrightAgentMCP" [level=1] [ref=e698]
+      - generic [ref=e699]:
+        - generic [ref=e702]:
+          - generic [ref=e703]:
+            - generic [ref=e704]:
+              - button "main branch" [ref=e706] [cursor=pointer]:
+                - generic [ref=e707]:
+                  - generic [ref=e709]:
+                    - img [ref=e711]
+                    - generic [ref=e714]: main
+                  - generic:
+                    - img
+              - generic [ref=e715]:
+                - link "3 Branches" [ref=e716] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/branches
+                  - generic [ref=e717]:
+                    - generic:
+                      - img
+                    - generic [ref=e719]:
+                      - strong [ref=e720]: "3"
+                      - text: Branches
+                - link "0 Tags" [ref=e721] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/tags
+                  - generic [ref=e722]:
+                    - generic:
+                      - img
+                    - generic [ref=e724]:
+                      - strong [ref=e725]: "0"
+                      - text: Tags
+            - generic [ref=e726]:
+              - generic [ref=e727]:
+                - generic [ref=e730]:
+                  - img [ref=e732]
+                  - combobox "Go to file" [ref=e734]
+                  - generic [ref=e737]:
+                    - generic [ref=e738]: t
+                    - generic [ref=e739]: T
+                - generic [ref=e740]:
+                  - heading "Add file" [level=2] [ref=e741]
+                  - button "Add file" [expanded] [ref=e742] [cursor=pointer]:
+                    - generic [ref=e745]:
+                      - text: Add file
+                      - img [ref=e746]
+                  - menu "Add file" [ref=e1186]:
+                    - menuitem "Create new file" [active] [ref=e1187] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic [ref=e1189]: Create new file
+                    - menuitem "Upload files" [ref=e1190] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic [ref=e1192]: Upload files
+              - button "New agent session" [ref=e748] [cursor=pointer]:
+                - img [ref=e749]
+              - button "Code" [ref=e752] [cursor=pointer]:
+                - generic [ref=e753]:
+                  - generic:
+                    - img
+                  - generic [ref=e754]: Code
+                  - generic:
+                    - img
+          - generic [ref=e755]:
+            - generic [ref=e756]:
+              - heading "Folders and files" [level=2] [ref=e757]
+              - table "Folders and files" [ref=e758]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e759]:
+                  - 'row "Latest commit banashree1 commits by banashree1 test: Add DEV-69 happy path end-to-end test - Complete automobile ins… Open commit details failure Commit 1e22ff9 · May 6, 20264 hours ago History 7 Commits" [ref=e760]':
+                    - 'cell "Latest commit banashree1 commits by banashree1 test: Add DEV-69 happy path end-to-end test - Complete automobile ins… Open commit details failure Commit 1e22ff9 · May 6, 20264 hours ago History 7 Commits" [ref=e761]':
+                      - generic [ref=e762]:
+                        - heading "Latest commit" [level=2] [ref=e763]
+                        - generic [ref=e764]:
+                          - generic [ref=e766]:
+                            - link "banashree1" [ref=e767] [cursor=pointer]:
+                              - /url: /banashree1
+                              - img "banashree1" [ref=e768]
+                            - link "commits by banashree1" [ref=e769] [cursor=pointer]:
+                              - /url: /banashree1/PlaywrightAgentMCP/commits?author=banashree1
+                              - text: banashree1
+                          - generic [ref=e770]:
+                            - 'link "test: Add DEV-69 happy path end-to-end test - Complete automobile ins…" [ref=e773] [cursor=pointer]':
+                              - /url: /banashree1/PlaywrightAgentMCP/commit/1e22ff9a81c83836816d43d08871efcafa9acdc9
+                            - button "Open commit details" [ref=e774] [cursor=pointer]:
+                              - img [ref=e775]
+                            - button "failure" [ref=e777] [cursor=pointer]:
+                              - img [ref=e778]
+                        - generic [ref=e780]:
+                          - generic [ref=e782]:
+                            - link "Commit 1e22ff9" [ref=e783] [cursor=pointer]:
+                              - /url: /banashree1/PlaywrightAgentMCP/commit/1e22ff9a81c83836816d43d08871efcafa9acdc9
+                              - text: 1e22ff9
+                            - text: ·
+                            - generic "May 6, 2026, 7:46 AM EDT" [ref=e784]: May 6, 20264 hours ago
+                          - generic [ref=e785]:
+                            - heading "History" [level=2] [ref=e786]
+                            - link "7 Commits" [ref=e787] [cursor=pointer]:
+                              - /url: /banashree1/PlaywrightAgentMCP/commits/main/
+                              - generic [ref=e788]:
+                                - generic:
+                                  - img
+                                - generic [ref=e789]: 7 Commits
+                  - 'row ".github, (Directory) ci: align workflow test suites with tests/us and feature branch triggers May 4, 20262 days ago" [ref=e790]':
+                    - cell ".github, (Directory)" [ref=e791]:
+                      - generic [ref=e792]:
+                        - img [ref=e793]
+                        - link ".github, (Directory)" [ref=e798] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/.github
+                          - text: .github
+                    - 'cell "ci: align workflow test suites with tests/us and feature branch triggers" [ref=e799]':
+                      - 'link "ci: align workflow test suites with tests/us and feature branch triggers" [ref=e802] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/dd23ad9dfa3cebc2c87bb2adab6aba5a1bddef7a
+                    - cell "May 4, 20262 days ago" [ref=e803]:
+                      - generic [ref=e804]: May 4, 20262 days ago
+                  - 'row ".playwright-mcp, (Directory) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e805]':
+                    - cell ".playwright-mcp, (Directory)" [ref=e806]:
+                      - generic [ref=e807]:
+                        - img [ref=e808]
+                        - link ".playwright-mcp, (Directory)" [ref=e813] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/.playwright-mcp
+                          - text: .playwright-mcp
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e814]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e817] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e818]:
+                      - generic [ref=e819]: May 4, 20262 days ago
+                  - 'row "docs, (Directory) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e820]':
+                    - cell "docs, (Directory)" [ref=e821]:
+                      - generic [ref=e822]:
+                        - img [ref=e823]
+                        - link "docs, (Directory)" [ref=e828] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/docs
+                          - text: docs
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e829]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e832] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e833]:
+                      - generic [ref=e834]: May 4, 20262 days ago
+                  - 'row "knowledge-base, (Directory) Initial commit: Playwright automation project with test scripts and t… Mar 31, 20262 months ago" [ref=e835]':
+                    - cell "knowledge-base, (Directory)" [ref=e836]:
+                      - generic [ref=e837]:
+                        - img [ref=e838]
+                        - link "knowledge-base, (Directory)" [ref=e843] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/knowledge-base
+                          - text: knowledge-base
+                    - 'cell "Initial commit: Playwright automation project with test scripts and t…" [ref=e844]':
+                      - 'link "Initial commit: Playwright automation project with test scripts and t…" [ref=e847] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/e1da6b2943fa8f1d905b26f5ec23c7f304b84643
+                    - cell "Mar 31, 20262 months ago" [ref=e848]:
+                      - generic [ref=e849]: Mar 31, 20262 months ago
+                  - 'row "scripts, (Directory) test: Update tests and related files (4 files) Apr 1, 2026last month" [ref=e850]':
+                    - cell "scripts, (Directory)" [ref=e851]:
+                      - generic [ref=e852]:
+                        - img [ref=e853]
+                        - link "scripts, (Directory)" [ref=e858] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/scripts
+                          - text: scripts
+                    - 'cell "test: Update tests and related files (4 files)" [ref=e859]':
+                      - 'link "test: Update tests and related files (4 files)" [ref=e862] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/b9c775544e7fa0087e64d13eefa4c83c10b7f1f7
+                    - cell "Apr 1, 2026last month" [ref=e863]:
+                      - generic [ref=e864]: Apr 1, 2026last month
+                  - 'row "specs, (Directory) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e865]':
+                    - cell "specs, (Directory)" [ref=e866]:
+                      - generic [ref=e867]:
+                        - img [ref=e868]
+                        - link "specs, (Directory)" [ref=e873] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/specs
+                          - text: specs
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e874]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e877] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e878]:
+                      - generic [ref=e879]: May 4, 20262 days ago
+                  - 'row "tests/us, (Directory) test: Add DEV-69 happy path end-to-end test - Complete automobile ins… May 6, 20264 hours ago" [ref=e880]':
+                    - cell "tests/us, (Directory)" [ref=e881]:
+                      - generic [ref=e882]:
+                        - img [ref=e883]
+                        - link "tests/us, (Directory)" [ref=e888] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/tree/main/tests/us
+                          - text: tests/us
+                    - 'cell "test: Add DEV-69 happy path end-to-end test - Complete automobile ins…" [ref=e889]':
+                      - 'link "test: Add DEV-69 happy path end-to-end test - Complete automobile ins…" [ref=e892] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/1e22ff9a81c83836816d43d08871efcafa9acdc9
+                    - cell "May 6, 20264 hours ago" [ref=e893]:
+                      - generic [ref=e894]: May 6, 20264 hours ago
+                  - 'row ".gitignore, (File) Initial commit: Playwright automation project with test scripts and t… Mar 31, 20262 months ago" [ref=e895]':
+                    - cell ".gitignore, (File)" [ref=e896]:
+                      - generic [ref=e897]:
+                        - img [ref=e898]
+                        - link ".gitignore, (File)" [ref=e903] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/.gitignore
+                          - text: .gitignore
+                    - 'cell "Initial commit: Playwright automation project with test scripts and t…" [ref=e904]':
+                      - 'link "Initial commit: Playwright automation project with test scripts and t…" [ref=e907] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/e1da6b2943fa8f1d905b26f5ec23c7f304b84643
+                    - cell "Mar 31, 20262 months ago" [ref=e908]:
+                      - generic [ref=e909]: Mar 31, 20262 months ago
+                  - 'row "JIRA_MCP_README.md, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e910]':
+                    - cell "JIRA_MCP_README.md, (File)" [ref=e911]:
+                      - generic [ref=e912]:
+                        - img [ref=e913]
+                        - link "JIRA_MCP_README.md, (File)" [ref=e918] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/JIRA_MCP_README.md
+                          - text: JIRA_MCP_README.md
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e919]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e922] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e923]:
+                      - generic [ref=e924]: May 4, 20262 days ago
+                  - 'row "MCPGITPLAYWRIGHT, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e925]':
+                    - cell "MCPGITPLAYWRIGHT, (File)" [ref=e926]:
+                      - generic [ref=e927]:
+                        - img [ref=e928]
+                        - link "MCPGITPLAYWRIGHT, (File)" [ref=e933] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/MCPGITPLAYWRIGHT
+                          - text: MCPGITPLAYWRIGHT
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e934]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e937] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e938]:
+                      - generic [ref=e939]: May 4, 20262 days ago
+                  - 'row "MCPGITPLAYWRIGHT.pub, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e940]':
+                    - cell "MCPGITPLAYWRIGHT.pub, (File)" [ref=e941]:
+                      - generic [ref=e942]:
+                        - img [ref=e943]
+                        - link "MCPGITPLAYWRIGHT.pub, (File)" [ref=e948] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/MCPGITPLAYWRIGHT.pub
+                          - text: MCPGITPLAYWRIGHT.pub
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e949]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e952] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e953]:
+                      - generic [ref=e954]: May 4, 20262 days ago
+                  - 'row "jira-mcp-package.json, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e955]':
+                    - cell "jira-mcp-package.json, (File)" [ref=e956]:
+                      - generic [ref=e957]:
+                        - img [ref=e958]
+                        - link "jira-mcp-package.json, (File)" [ref=e963] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/jira-mcp-package.json
+                          - text: jira-mcp-package.json
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e964]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e967] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e968]:
+                      - generic [ref=e969]: May 4, 20262 days ago
+                  - 'row "jira-mcp-server.mjs, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e970]':
+                    - cell "jira-mcp-server.mjs, (File)" [ref=e971]:
+                      - generic [ref=e972]:
+                        - img [ref=e973]
+                        - link "jira-mcp-server.mjs, (File)" [ref=e978] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/jira-mcp-server.mjs
+                          - text: jira-mcp-server.mjs
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e979]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e982] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e983]:
+                      - generic [ref=e984]: May 4, 20262 days ago
+                  - 'row "mcp-config.json, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e985]':
+                    - cell "mcp-config.json, (File)" [ref=e986]:
+                      - generic [ref=e987]:
+                        - img [ref=e988]
+                        - link "mcp-config.json, (File)" [ref=e993] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/mcp-config.json
+                          - text: mcp-config.json
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e994]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e997] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e998]:
+                      - generic [ref=e999]: May 4, 20262 days ago
+                  - 'row "package-lock.json, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e1000]':
+                    - cell "package-lock.json, (File)" [ref=e1001]:
+                      - generic [ref=e1002]:
+                        - img [ref=e1003]
+                        - link "package-lock.json, (File)" [ref=e1008] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/package-lock.json
+                          - text: package-lock.json
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1009]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1012] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e1013]:
+                      - generic [ref=e1014]: May 4, 20262 days ago
+                  - 'row "package.json, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e1015]':
+                    - cell "package.json, (File)" [ref=e1016]:
+                      - generic [ref=e1017]:
+                        - img [ref=e1018]
+                        - link "package.json, (File)" [ref=e1023] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/package.json
+                          - text: package.json
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1024]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1027] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e1028]:
+                      - generic [ref=e1029]: May 4, 20262 days ago
+                  - 'row "playwright.config.js, (File) Initial commit: Playwright automation project with test scripts and t… Mar 31, 20262 months ago" [ref=e1030]':
+                    - cell "playwright.config.js, (File)" [ref=e1031]:
+                      - generic [ref=e1032]:
+                        - img [ref=e1033]
+                        - link "playwright.config.js, (File)" [ref=e1038] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/playwright.config.js
+                          - text: playwright.config.js
+                    - 'cell "Initial commit: Playwright automation project with test scripts and t…" [ref=e1039]':
+                      - 'link "Initial commit: Playwright automation project with test scripts and t…" [ref=e1042] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/e1da6b2943fa8f1d905b26f5ec23c7f304b84643
+                    - cell "Mar 31, 20262 months ago" [ref=e1043]:
+                      - generic [ref=e1044]: Mar 31, 20262 months ago
+                  - 'row "setup-jira-workspace.mjs, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e1045]':
+                    - cell "setup-jira-workspace.mjs, (File)" [ref=e1046]:
+                      - generic [ref=e1047]:
+                        - img [ref=e1048]
+                        - link "setup-jira-workspace.mjs, (File)" [ref=e1053] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/setup-jira-workspace.mjs
+                          - text: setup-jira-workspace.mjs
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1054]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1057] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e1058]:
+                      - generic [ref=e1059]: May 4, 20262 days ago
+                  - 'row "test-jira-connection.mjs, (File) feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC… May 4, 20262 days ago" [ref=e1060]':
+                    - cell "test-jira-connection.mjs, (File)" [ref=e1061]:
+                      - generic [ref=e1062]:
+                        - img [ref=e1063]
+                        - link "test-jira-connection.mjs, (File)" [ref=e1068] [cursor=pointer]:
+                          - /url: /banashree1/PlaywrightAgentMCP/blob/main/test-jira-connection.mjs
+                          - text: test-jira-connection.mjs
+                    - 'cell "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1069]':
+                      - 'link "feat: align framework to DEV-69/70/71 - clean test suite with JIRA MC…" [ref=e1072] [cursor=pointer]':
+                        - /url: /banashree1/PlaywrightAgentMCP/commit/740097ef52f92d19b87c0f37d400df3cca429884
+                    - cell "May 4, 20262 days ago" [ref=e1073]:
+                      - generic [ref=e1074]: May 4, 20262 days ago
+            - generic [ref=e1076]:
+              - generic [ref=e1077]:
+                - heading "Repository files navigation" [level=2] [ref=e1078]
+                - navigation "Repository files" [ref=e1079]:
+                  - list [ref=e1080]:
+                    - listitem [ref=e1081]:
+                      - link "README" [ref=e1082] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e1084]
+                        - generic [ref=e1086]: README
+              - generic [ref=e1088]:
+                - img [ref=e1090]
+                - heading "Add a README" [level=2] [ref=e1092]
+                - paragraph [ref=e1093]: Add a README with an overview of your project.
+                - link "Add a README" [ref=e1095] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/new/main?filename=README.md
+                  - generic [ref=e1097]: Add a README
+        - generic [ref=e1101]:
+          - generic [ref=e1103]:
+            - group:
+              - button "Edit repository metadata" [ref=e1104] [cursor=pointer]:
+                - img "Edit repository metadata" [ref=e1106]
+            - generic [ref=e1108]:
+              - heading "About" [level=2] [ref=e1109]
+              - generic [ref=e1110]: No description, website, or topics provided.
+              - link "Activity" [ref=e1112] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/activity
+                - img [ref=e1113]
+                - text: Activity
+              - heading "Stars" [level=3] [ref=e1115]
+              - link "0 stars" [ref=e1117] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/stargazers
+                - img [ref=e1118]
+                - strong [ref=e1120]: "0"
+                - text: stars
+              - heading "Watchers" [level=3] [ref=e1121]
+              - link "0 watching" [ref=e1123] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/watchers
+                - img [ref=e1124]
+                - strong [ref=e1126]: "0"
+                - text: watching
+              - heading "Forks" [level=3] [ref=e1127]
+              - link "0 forks" [ref=e1129] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/forks
+                - img [ref=e1130]
+                - strong [ref=e1132]: "0"
+                - text: forks
+          - generic [ref=e1134]:
+            - heading "Releases" [level=2] [ref=e1135]:
+              - link "Releases" [ref=e1136] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/releases
+            - generic [ref=e1137]: No releases published
+            - link "Create a new release" [ref=e1139] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/releases/new
+          - generic [ref=e1141]:
+            - heading "Deployments 42" [level=2] [ref=e1142]:
+              - link "Deployments 42" [ref=e1143] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/deployments
+                - text: Deployments
+                - generic "42" [ref=e1144]
+            - list [ref=e1145]:
+              - listitem [ref=e1146]:
+                - img [ref=e1147]
+                - link "github-pages" [ref=e1149] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/deployments/github-pages
+            - link "+ 41 deployments" [ref=e1151] [cursor=pointer]:
+              - /url: /banashree1/PlaywrightAgentMCP/deployments
+          - generic [ref=e1153]:
+            - heading "Packages" [level=2] [ref=e1154]:
+              - link "Packages" [ref=e1155] [cursor=pointer]:
+                - /url: /users/banashree1/packages?repo_name=PlaywrightAgentMCP
+            - generic [ref=e1156]:
+              - text: No packages published
+              - link "Publish your first package" [ref=e1157] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/packages
+          - generic [ref=e1159]:
+            - heading "Contributors 1" [level=2] [ref=e1160]:
+              - link "Contributors 1" [ref=e1161] [cursor=pointer]:
+                - /url: /banashree1/PlaywrightAgentMCP/graphs/contributors
+                - text: Contributors
+                - generic "1" [ref=e1162]
+            - list [ref=e1163]:
+              - listitem [ref=e1164]:
+                - link "@banashree1" [ref=e1165] [cursor=pointer]:
+                  - /url: https://github.com/banashree1
+                  - img "@banashree1" [ref=e1166]
+                - link "banashree1" [ref=e1168] [cursor=pointer]:
+                  - /url: https://github.com/banashree1
+                  - strong [ref=e1169]: banashree1
+          - generic [ref=e1171]:
+            - heading "Languages" [level=2] [ref=e1172]
+            - list [ref=e1176]:
+              - listitem [ref=e1177]:
+                - link "JavaScript 100.0%" [ref=e1178] [cursor=pointer]:
+                  - /url: /banashree1/PlaywrightAgentMCP/search?l=javascript
+                  - img [ref=e1179]
+                  - generic [ref=e1181]: JavaScript
+                  - generic [ref=e1182]: 100.0%
+  - contentinfo [ref=e612]:
+    - heading "Footer" [level=2] [ref=e613]
+    - generic [ref=e614]:
+      - generic [ref=e615]:
+        - link "GitHub Homepage" [ref=e616] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e617]
+        - generic [ref=e619]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e620]:
+        - heading "Footer navigation" [level=3] [ref=e621]
+        - list "Footer navigation" [ref=e622]:
+          - listitem [ref=e623]:
+            - link "Terms" [ref=e624] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e625]:
+            - link "Privacy" [ref=e626] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e627]:
+            - link "Security" [ref=e628] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e629]:
+            - link "Status" [ref=e630] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e631]:
+            - link "Community" [ref=e632] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e633]:
+            - link "Docs" [ref=e634] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e635]:
+            - link "Contact" [ref=e636] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e637]:
+            - button "Manage cookies" [ref=e639] [cursor=pointer]
+          - listitem [ref=e640]:
+            - button "Do not share my personal information" [ref=e642] [cursor=pointer]

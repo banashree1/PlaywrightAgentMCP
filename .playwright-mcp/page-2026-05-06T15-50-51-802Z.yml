@@ -1,0 +1,78 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#start-of-content"
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link "GitHub Support" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img [ref=e10]
+        - generic [ref=e12]: GitHub Support
+      - link "Sign in" [ref=e14] [cursor=pointer]:
+        - /url: /session/login?return_to=/request/landing
+  - region "Warning" [ref=e17]:
+    - img [ref=e19]
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - heading "GitHub Service Status" [level=2] [ref=e23]
+        - generic [ref=e25]:
+          - text: Pull Requests is currently status
+          - strong [ref=e26]: yellow
+          - text: ", with an update as of 5/6/26, 11:25 AM. This may affect Pull Requests behavior and performance."
+      - link "View status" [ref=e29] [cursor=pointer]:
+        - /url: https://stspg.io/dcjk8q4j4660
+        - generic [ref=e31]: View status
+  - banner [ref=e37]:
+    - img [ref=e38]
+    - heading "Welcome to GitHub Support" [level=2] [ref=e40]
+    - paragraph [ref=e41]: Sign in for support and to view your existing tickets
+    - generic [ref=e42]:
+      - link "Continue with GitHub" [ref=e43] [cursor=pointer]:
+        - /url: /session/login
+        - generic [ref=e44]:
+          - generic:
+            - img
+          - generic [ref=e45]: Continue with GitHub
+      - button "Continue with GHE.com" [ref=e46] [cursor=pointer]:
+        - generic [ref=e47]:
+          - generic:
+            - img
+          - generic [ref=e48]: Continue with GHE.com
+      - link "Sign up for GitHub" [ref=e49] [cursor=pointer]:
+        - /url: https://github.com/signup
+      - link "Can't sign in or don't have an account?" [ref=e50] [cursor=pointer]:
+        - /url: /contact/cannot_sign_in
+  - contentinfo [ref=e51]:
+    - contentinfo [ref=e54]:
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - paragraph [ref=e58]: © 2026 GitHub, Inc.
+          - link "Terms" [ref=e59] [cursor=pointer]:
+            - /url: https://docs.github.com/en/site-policy/github-terms/github-terms-of-service
+          - link "Privacy" [ref=e60] [cursor=pointer]:
+            - /url: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement
+          - link "Contacting Support" [ref=e61] [cursor=pointer]:
+            - /url: https://docs.github.com/en/support/contacting-github-support
+          - link "Manage cookies" [ref=e62] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e63]:
+          - link "Twitter" [ref=e64] [cursor=pointer]:
+            - /url: https://twitter.com/github
+            - img "Twitter" [ref=e65]
+          - link "Facebook" [ref=e66] [cursor=pointer]:
+            - /url: https://www.facebook.com/GitHub
+            - img "Facebook" [ref=e67]
+          - link "LinkedIn" [ref=e68] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/github
+            - img "LinkedIn" [ref=e69]
+          - link "YouTube" [ref=e70] [cursor=pointer]:
+            - /url: https://youtube.com/github
+            - img "YouTube" [ref=e71]
+          - link "Twitch" [ref=e72] [cursor=pointer]:
+            - /url: https://www.twitch.tv/github
+            - img "Twitch" [ref=e73]
+          - link "TikTok" [ref=e74] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@github
+            - img "TikTok" [ref=e75]
+          - link "Github" [ref=e76] [cursor=pointer]:
+            - /url: https://github.com/
+            - img "Github" [ref=e77]

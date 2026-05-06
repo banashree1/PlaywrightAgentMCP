@@ -1,0 +1,501 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global Navigation Menu" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Open menu" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+          - link "Homepage (g then d)" [ref=e15] [cursor=pointer]:
+            - /url: /
+            - img [ref=e16]
+        - generic [ref=e18]:
+          - navigation "Breadcrumbs" [ref=e19]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "Settings" [ref=e22] [cursor=pointer]:
+                  - /url: /settings/profile
+                  - generic [ref=e23]: Settings
+              - listitem [ref=e24]:
+                - link "Developer Settings" [ref=e25] [cursor=pointer]:
+                  - /url: /settings/apps
+                  - generic [ref=e26]: Developer Settings
+          - button "Search or jump to…" [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]:
+              - generic:
+                - img
+              - generic [ref=e31]:
+                - generic:
+                  - text: Type
+                  - generic: /
+                  - text: to search
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e35]:
+              - generic [ref=e36]:
+                - link "Chat with Copilot" [ref=e38] [cursor=pointer]:
+                  - /url: /copilot
+                  - img [ref=e39]
+                - button "Open Copilot…" [ref=e43] [cursor=pointer]:
+                  - generic:
+                    - img
+              - button "Open agents panel" [ref=e490] [cursor=pointer]:
+                - generic [ref=e491]:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - button "Create new..." [ref=e47] [cursor=pointer]:
+              - generic [ref=e48]:
+                - generic:
+                  - img
+              - generic:
+                - img
+            - generic [ref=e49]:
+              - link "All issues (g then i)" [ref=e50] [cursor=pointer]:
+                - /url: /issues
+                - img [ref=e51]
+              - link "All pull requests (g then p)" [ref=e54] [cursor=pointer]:
+                - /url: /pulls
+                - img [ref=e55]
+              - link "All repositories" [ref=e57] [cursor=pointer]:
+                - /url: /repos
+                - img [ref=e58]
+          - button "Open user navigation menu" [ref=e64] [cursor=pointer]:
+            - img "User avatar" [ref=e65]
+  - main [ref=e68]:
+    - generic [ref=e70]:
+      - navigation "Developer settings" [ref=e73]:
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "GitHub Apps" [ref=e77] [cursor=pointer]:
+              - /url: /settings/apps
+              - generic:
+                - img
+              - generic [ref=e78]: GitHub Apps
+          - listitem [ref=e79]:
+            - link "OAuth Apps" [ref=e80] [cursor=pointer]:
+              - /url: /settings/developers
+              - generic:
+                - img
+              - generic [ref=e81]: OAuth Apps
+          - listitem [ref=e82]:
+            - button "Personal access tokens" [expanded] [ref=e83] [cursor=pointer]:
+              - generic:
+                - img
+              - generic [ref=e84]: Personal access tokens
+              - generic:
+                - img
+            - list "Personal access tokens" [ref=e85]:
+              - listitem [ref=e86]:
+                - link "Fine-grained tokens" [ref=e87] [cursor=pointer]:
+                  - /url: /settings/personal-access-tokens
+                  - generic [ref=e88]: Fine-grained tokens
+              - listitem [ref=e89]:
+                - link "Tokens (classic)" [ref=e90] [cursor=pointer]:
+                  - /url: /settings/tokens
+                  - generic [ref=e91]: Tokens (classic)
+      - generic [ref=e94]:
+        - heading "New personal access token (classic)" [level=2] [ref=e96]
+        - paragraph [ref=e97]:
+          - text: Personal access tokens (classic) function like ordinary OAuth access tokens. They can be used instead of a password for Git over HTTPS, or can be used to
+          - link "authenticate to the API over Basic Authentication" [ref=e98] [cursor=pointer]:
+            - /url: https://docs.github.com/v3/auth/#basic-authentication
+          - text: .
+        - form "Personal access token" [ref=e99]:
+          - generic [ref=e100]:
+            - term [ref=e101]: Note
+            - definition [ref=e102]:
+              - textbox "Note" [active] [ref=e103]: MCP Playwright Automation Token - Git Operations
+              - paragraph [ref=e104]: What’s this token for?
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - generic [ref=e108]:
+                - term [ref=e109]: Expiration
+                - definition [ref=e110]:
+                  - button "30 days (Jun 05, 2026)" [ref=e115] [cursor=pointer]:
+                    - generic [ref=e116]:
+                      - generic:
+                        - img
+                      - generic [ref=e117]: 30 days (Jun 05, 2026)
+                    - generic:
+                      - img
+              - generic [ref=e118]: The token will expire on the selected date
+            - generic [ref=e119]:
+              - term [ref=e120]:
+                - strong [ref=e121]: Select scopes
+              - definition [ref=e122]:
+                - paragraph [ref=e123]:
+                  - text: Scopes define the access for personal tokens.
+                  - link "Read more about OAuth scopes." [ref=e124] [cursor=pointer]:
+                    - /url: https://docs.github.com/apps/building-oauth-apps/scopes-for-oauth-apps/
+                - list [ref=e126]:
+                  - listitem [ref=e127]:
+                    - generic [ref=e129]:
+                      - generic [ref=e130]:
+                        - checkbox "repo Full control of private repositories" [checked] [disabled] [ref=e131]
+                        - text: repo
+                      - generic [ref=e132]: Full control of private repositories
+                    - list [ref=e133]:
+                      - listitem [ref=e134]:
+                        - generic [ref=e136]:
+                          - generic [ref=e137]:
+                            - checkbox "repo:status Access commit status" [checked] [disabled] [ref=e138]
+                            - text: repo:status
+                          - generic [ref=e139]: Access commit status
+                      - listitem [ref=e140]:
+                        - generic [ref=e142]:
+                          - generic [ref=e143]:
+                            - checkbox "repo_deployment Access deployment status" [checked] [disabled] [ref=e144]
+                            - text: repo_deployment
+                          - generic [ref=e145]: Access deployment status
+                      - listitem [ref=e146]:
+                        - generic [ref=e148]:
+                          - generic [ref=e149]:
+                            - checkbox "public_repo Access public repositories" [checked] [disabled] [ref=e150]
+                            - text: public_repo
+                          - generic [ref=e151]: Access public repositories
+                      - listitem [ref=e152]:
+                        - generic [ref=e154]:
+                          - generic [ref=e155]:
+                            - checkbox "repo:invite Access repository invitations" [checked] [disabled] [ref=e156]
+                            - text: repo:invite
+                          - generic [ref=e157]: Access repository invitations
+                      - listitem [ref=e158]:
+                        - generic [ref=e160]:
+                          - generic [ref=e161]:
+                            - checkbox "security_events Read and write security events" [checked] [disabled] [ref=e162]
+                            - text: security_events
+                          - generic [ref=e163]: Read and write security events
+                  - listitem [ref=e164]:
+                    - generic [ref=e166]:
+                      - generic [ref=e167]:
+                        - checkbox "workflow Update GitHub Action workflows" [checked] [ref=e168]
+                        - text: workflow
+                      - generic [ref=e169]: Update GitHub Action workflows
+                  - listitem [ref=e170]:
+                    - generic [ref=e172]:
+                      - generic [ref=e173]:
+                        - checkbox "write:packages Upload packages to GitHub Package Registry" [checked] [ref=e174]
+                        - text: write:packages
+                      - generic [ref=e175]: Upload packages to GitHub Package Registry
+                    - list [ref=e176]:
+                      - listitem [ref=e177]:
+                        - generic [ref=e179]:
+                          - generic [ref=e180]:
+                            - checkbox "read:packages Download packages from GitHub Package Registry" [checked] [disabled] [ref=e181]
+                            - text: read:packages
+                          - generic [ref=e182]: Download packages from GitHub Package Registry
+                  - listitem [ref=e183]:
+                    - generic [ref=e185]:
+                      - generic [ref=e186]:
+                        - checkbox "delete:packages Delete packages from GitHub Package Registry" [ref=e187]
+                        - text: delete:packages
+                      - generic [ref=e188]: Delete packages from GitHub Package Registry
+                  - listitem [ref=e189]:
+                    - generic [ref=e191]:
+                      - generic [ref=e192]:
+                        - checkbox "admin:org Full control of orgs and teams, read and write org projects" [ref=e193]
+                        - text: admin:org
+                      - generic [ref=e194]: Full control of orgs and teams, read and write org projects
+                    - list [ref=e195]:
+                      - listitem [ref=e196]:
+                        - generic [ref=e198]:
+                          - generic [ref=e199]:
+                            - checkbox "write:org Read and write org and team membership, read and write org projects" [ref=e200]
+                            - text: write:org
+                          - generic [ref=e201]: Read and write org and team membership, read and write org projects
+                        - list [ref=e202]:
+                          - listitem [ref=e203]:
+                            - generic [ref=e205]:
+                              - generic [ref=e206]:
+                                - checkbox "read:org Read org and team membership, read org projects" [ref=e207]
+                                - text: read:org
+                              - generic [ref=e208]: Read org and team membership, read org projects
+                      - listitem [ref=e209]:
+                        - generic [ref=e211]:
+                          - generic [ref=e212]:
+                            - checkbox "manage_runners:org Manage org runners and runner groups" [ref=e213]
+                            - text: manage_runners:org
+                          - generic [ref=e214]: Manage org runners and runner groups
+                  - listitem [ref=e215]:
+                    - generic [ref=e217]:
+                      - generic [ref=e218]:
+                        - checkbox "admin:public_key Full control of user public keys" [ref=e219]
+                        - text: admin:public_key
+                      - generic [ref=e220]: Full control of user public keys
+                    - list [ref=e221]:
+                      - listitem [ref=e222]:
+                        - generic [ref=e224]:
+                          - generic [ref=e225]:
+                            - checkbox "write:public_key Write user public keys" [ref=e226]
+                            - text: write:public_key
+                          - generic [ref=e227]: Write user public keys
+                        - list [ref=e228]:
+                          - listitem [ref=e229]:
+                            - generic [ref=e231]:
+                              - generic [ref=e232]:
+                                - checkbox "read:public_key Read user public keys" [ref=e233]
+                                - text: read:public_key
+                              - generic [ref=e234]: Read user public keys
+                  - listitem [ref=e235]:
+                    - generic [ref=e237]:
+                      - generic [ref=e238]:
+                        - checkbox "admin:repo_hook Full control of repository hooks" [ref=e239]
+                        - text: admin:repo_hook
+                      - generic [ref=e240]: Full control of repository hooks
+                    - list [ref=e241]:
+                      - listitem [ref=e242]:
+                        - generic [ref=e244]:
+                          - generic [ref=e245]:
+                            - checkbox "write:repo_hook Write repository hooks" [ref=e246]
+                            - text: write:repo_hook
+                          - generic [ref=e247]: Write repository hooks
+                        - list [ref=e248]:
+                          - listitem [ref=e249]:
+                            - generic [ref=e251]:
+                              - generic [ref=e252]:
+                                - checkbox "read:repo_hook Read repository hooks" [ref=e253]
+                                - text: read:repo_hook
+                              - generic [ref=e254]: Read repository hooks
+                  - listitem [ref=e255]:
+                    - generic [ref=e257]:
+                      - generic [ref=e258]:
+                        - checkbox "admin:org_hook Full control of organization hooks" [ref=e259]
+                        - text: admin:org_hook
+                      - generic [ref=e260]: Full control of organization hooks
+                  - listitem [ref=e261]:
+                    - generic [ref=e263]:
+                      - generic [ref=e264]:
+                        - checkbox "gist Create gists" [ref=e265]
+                        - text: gist
+                      - generic [ref=e266]: Create gists
+                  - listitem [ref=e267]:
+                    - generic [ref=e269]:
+                      - generic [ref=e270]:
+                        - checkbox "notifications Access notifications" [ref=e271]
+                        - text: notifications
+                      - generic [ref=e272]: Access notifications
+                  - listitem [ref=e273]:
+                    - generic [ref=e275]:
+                      - generic [ref=e276]:
+                        - checkbox "user Update ALL user data" [ref=e277]
+                        - text: user
+                      - generic [ref=e278]: Update ALL user data
+                    - list [ref=e279]:
+                      - listitem [ref=e280]:
+                        - generic [ref=e282]:
+                          - generic [ref=e283]:
+                            - checkbox "read:user Read ALL user profile data" [ref=e284]
+                            - text: read:user
+                          - generic [ref=e285]: Read ALL user profile data
+                      - listitem [ref=e286]:
+                        - generic [ref=e288]:
+                          - generic [ref=e289]:
+                            - checkbox "user:email Access user email addresses (read-only)" [ref=e290]
+                            - text: user:email
+                          - generic [ref=e291]: Access user email addresses (read-only)
+                      - listitem [ref=e292]:
+                        - generic [ref=e294]:
+                          - generic [ref=e295]:
+                            - checkbox "user:follow Follow and unfollow users" [ref=e296]
+                            - text: user:follow
+                          - generic [ref=e297]: Follow and unfollow users
+                  - listitem [ref=e298]:
+                    - generic [ref=e300]:
+                      - generic [ref=e301]:
+                        - checkbox "delete_repo Delete repositories" [ref=e302]
+                        - text: delete_repo
+                      - generic [ref=e303]: Delete repositories
+                  - listitem [ref=e304]:
+                    - generic [ref=e306]:
+                      - generic [ref=e307]:
+                        - checkbox "write:discussion Read and write team discussions" [ref=e308]
+                        - text: write:discussion
+                      - generic [ref=e309]: Read and write team discussions
+                    - list [ref=e310]:
+                      - listitem [ref=e311]:
+                        - generic [ref=e313]:
+                          - generic [ref=e314]:
+                            - checkbox "read:discussion Read team discussions" [ref=e315]
+                            - text: read:discussion
+                          - generic [ref=e316]: Read team discussions
+                  - listitem [ref=e317]:
+                    - generic [ref=e319]:
+                      - generic [ref=e320]:
+                        - checkbox "admin:enterprise Full control of enterprises" [ref=e321]
+                        - text: admin:enterprise
+                      - generic [ref=e322]: Full control of enterprises
+                    - list [ref=e323]:
+                      - listitem [ref=e324]:
+                        - generic [ref=e326]:
+                          - generic [ref=e327]:
+                            - checkbox "manage_runners:enterprise Manage enterprise runners and runner groups" [ref=e328]
+                            - text: manage_runners:enterprise
+                          - generic [ref=e329]: Manage enterprise runners and runner groups
+                      - listitem [ref=e330]:
+                        - generic [ref=e332]:
+                          - generic [ref=e333]:
+                            - checkbox "manage_billing:enterprise Read and write enterprise billing data" [ref=e334]
+                            - text: manage_billing:enterprise
+                          - generic [ref=e335]: Read and write enterprise billing data
+                        - list [ref=e336]:
+                          - listitem [ref=e337]:
+                            - generic [ref=e339]:
+                              - generic [ref=e340]:
+                                - checkbox "read:enterprise Read enterprise profile data" [ref=e341]
+                                - text: read:enterprise
+                              - generic [ref=e342]: Read enterprise profile data
+                      - listitem [ref=e343]:
+                        - generic [ref=e345]:
+                          - generic [ref=e346]:
+                            - checkbox "scim:enterprise Provisioning of users and groups via SCIM" [ref=e347]
+                            - text: scim:enterprise
+                          - generic [ref=e348]: Provisioning of users and groups via SCIM
+                  - listitem [ref=e349]:
+                    - generic [ref=e351]:
+                      - generic [ref=e352]:
+                        - checkbox "audit_log Full control of audit log" [ref=e353]
+                        - text: audit_log
+                      - generic [ref=e354]: Full control of audit log
+                    - list [ref=e355]:
+                      - listitem [ref=e356]:
+                        - generic [ref=e358]:
+                          - generic [ref=e359]:
+                            - checkbox "read:audit_log Read access of audit log" [ref=e360]
+                            - text: read:audit_log
+                          - generic [ref=e361]: Read access of audit log
+                  - listitem [ref=e362]:
+                    - generic [ref=e364]:
+                      - generic [ref=e365]:
+                        - checkbox "codespace Full control of codespaces" [ref=e366]
+                        - text: codespace
+                      - generic [ref=e367]: Full control of codespaces
+                    - list [ref=e368]:
+                      - listitem [ref=e369]:
+                        - generic [ref=e371]:
+                          - generic [ref=e372]:
+                            - checkbox "codespace:secrets Ability to create, read, update, and delete codespace secrets" [ref=e373]
+                            - text: codespace:secrets
+                          - generic [ref=e374]: Ability to create, read, update, and delete codespace secrets
+                  - listitem [ref=e375]:
+                    - generic [ref=e377]:
+                      - generic [ref=e378]:
+                        - checkbox "copilot Full control of GitHub Copilot settings and seat assignments" [ref=e379]
+                        - text: copilot
+                      - generic [ref=e380]: Full control of GitHub Copilot settings and seat assignments
+                    - list [ref=e381]:
+                      - listitem [ref=e382]:
+                        - generic [ref=e384]:
+                          - generic [ref=e385]:
+                            - checkbox "manage_billing:copilot View and edit Copilot Business seat assignments" [ref=e386]
+                            - text: manage_billing:copilot
+                          - generic [ref=e387]: View and edit Copilot Business seat assignments
+                  - listitem [ref=e388]:
+                    - generic [ref=e390]:
+                      - generic [ref=e391]:
+                        - checkbox "write:network_configurations Write org hosted compute network configurations" [ref=e392]
+                        - text: write:network_configurations
+                      - generic [ref=e393]: Write org hosted compute network configurations
+                    - list [ref=e394]:
+                      - listitem [ref=e395]:
+                        - generic [ref=e397]:
+                          - generic [ref=e398]:
+                            - checkbox "read:network_configurations Read org hosted compute network configurations" [ref=e399]
+                            - text: read:network_configurations
+                          - generic [ref=e400]: Read org hosted compute network configurations
+                  - listitem [ref=e401]:
+                    - generic [ref=e403]:
+                      - generic [ref=e404]:
+                        - checkbox "project Full control of projects" [ref=e405]
+                        - text: project
+                      - generic [ref=e406]: Full control of projects
+                    - list [ref=e407]:
+                      - listitem [ref=e408]:
+                        - generic [ref=e410]:
+                          - generic [ref=e411]:
+                            - checkbox "read:project Read access of projects" [ref=e412]
+                            - text: read:project
+                          - generic [ref=e413]: Read access of projects
+                  - listitem [ref=e414]:
+                    - generic [ref=e416]:
+                      - generic [ref=e417]:
+                        - checkbox "admin:gpg_key Full control of public user GPG keys" [ref=e418]
+                        - text: admin:gpg_key
+                      - generic [ref=e419]: Full control of public user GPG keys
+                    - list [ref=e420]:
+                      - listitem [ref=e421]:
+                        - generic [ref=e423]:
+                          - generic [ref=e424]:
+                            - checkbox "write:gpg_key Write public user GPG keys" [ref=e425]
+                            - text: write:gpg_key
+                          - generic [ref=e426]: Write public user GPG keys
+                        - list [ref=e427]:
+                          - listitem [ref=e428]:
+                            - generic [ref=e430]:
+                              - generic [ref=e431]:
+                                - checkbox "read:gpg_key Read public user GPG keys" [ref=e432]
+                                - text: read:gpg_key
+                              - generic [ref=e433]: Read public user GPG keys
+                  - listitem [ref=e434]:
+                    - generic [ref=e436]:
+                      - generic [ref=e437]:
+                        - checkbox "admin:ssh_signing_key Full control of public user SSH signing keys" [ref=e438]
+                        - text: admin:ssh_signing_key
+                      - generic [ref=e439]: Full control of public user SSH signing keys
+                    - list [ref=e440]:
+                      - listitem [ref=e441]:
+                        - generic [ref=e443]:
+                          - generic [ref=e444]:
+                            - checkbox "write:ssh_signing_key Write public user SSH signing keys" [ref=e445]
+                            - text: write:ssh_signing_key
+                          - generic [ref=e446]: Write public user SSH signing keys
+                        - list [ref=e447]:
+                          - listitem [ref=e448]:
+                            - generic [ref=e450]:
+                              - generic [ref=e451]:
+                                - checkbox "read:ssh_signing_key Read public user SSH signing keys" [ref=e452]
+                                - text: read:ssh_signing_key
+                              - generic [ref=e453]: Read public user SSH signing keys
+          - paragraph [ref=e454]:
+            - button "Generate token" [ref=e455] [cursor=pointer]
+            - link "Cancel" [ref=e456] [cursor=pointer]:
+              - /url: /settings/tokens
+  - contentinfo [ref=e457]:
+    - heading "Footer" [level=2] [ref=e458]
+    - generic [ref=e459]:
+      - generic [ref=e460]:
+        - link "GitHub Homepage" [ref=e461] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e462]
+        - generic [ref=e464]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e465]:
+        - heading "Footer navigation" [level=3] [ref=e466]
+        - list "Footer navigation" [ref=e467]:
+          - listitem [ref=e468]:
+            - link "Terms" [ref=e469] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e470]:
+            - link "Privacy" [ref=e471] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e472]:
+            - link "Security" [ref=e473] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e474]:
+            - link "Status" [ref=e475] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e476]:
+            - link "Community" [ref=e477] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e478]:
+            - link "Docs" [ref=e479] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e480]:
+            - link "Contact" [ref=e481] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e482]:
+            - button "Manage cookies" [ref=e484] [cursor=pointer]
+          - listitem [ref=e485]:
+            - button "Do not share my personal information" [ref=e487] [cursor=pointer]

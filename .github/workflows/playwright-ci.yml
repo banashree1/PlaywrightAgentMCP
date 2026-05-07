@@ -68,24 +68,18 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: always()
-    
     permissions:
-      pages: write
-      id-token: write
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      contents: write
     
     steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+
       - name: "Download All Artifacts"
         uses: actions/download-artifact@v4
         with:
           path: artifacts
-      
-      - name: "Setup Pages"
-        uses: actions/configure-pages@v4
-      
+
       - name: "Create Combined Report"
         run: |
           mkdir -p combined-report
@@ -101,16 +95,14 @@ jobs:
             fi
           done
       
-      - name: "Upload Pages Artifact"
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: combined-report
-      
       - name: "Deploy to GitHub Pages"
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: combined-report
+          publish_branch: gh-pages
       
       - name: "Notify Completion"
         run: |
           echo "Pipeline completed successfully!"
-          echo "Test reports available at: ${{ steps.deployment.outputs.page_url }}"
+          echo "Test reports deployed to the gh-pages branch."

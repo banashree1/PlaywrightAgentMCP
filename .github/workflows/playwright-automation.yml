@@ -107,6 +107,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.auto_commit == 'true' || github.event.inputs.auto_commit == null }}
+    permissions:
+      contents: write
     
     steps:
       - name: 📥 Checkout repository
@@ -146,7 +148,7 @@ jobs:
             echo "📝 Committing with message: $COMMIT_MSG"
             git add .
             git commit -m "$COMMIT_MSG"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
             
             echo "✅ Successfully auto-committed test results"
           else
@@ -158,6 +160,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
     
     steps:
       - name: 📥 Checkout repository

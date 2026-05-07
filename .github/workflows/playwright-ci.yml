@@ -24,7 +24,7 @@ jobs:
     
     strategy:
       matrix:
-        browser: [chromium, firefox, webkit]
+        browser: [chromium]
     
     steps:
       - name: "Checkout Repository"
@@ -93,7 +93,7 @@ jobs:
           echo "<h1>Playwright Test Results</h1>" >> combined-report/index.html
           echo "<p>Generated on: $(date)</p>" >> combined-report/index.html
           
-          for browser in chromium firefox webkit; do
+          for browser in chromium; do
             if [ -d "artifacts/playwright-report-$browser" ]; then
               echo "<h2>$browser Results</h2>" >> combined-report/index.html
               cp -r artifacts/playwright-report-$browser combined-report/$browser

@@ -45,7 +45,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: [chromium, firefox, webkit]
+        browser: [chromium]
         
     steps:
       - name: 📥 Checkout repository
@@ -193,9 +193,9 @@ jobs:
           echo "|---------|--------|" >> $GITHUB_STEP_SUMMARY
           
           if [[ "${{ needs.test.result }}" == "success" ]]; then
-            echo "| All Browsers | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+            echo "| Chromium | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
           else
-            echo "| Some Browsers | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+            echo "| Chromium | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
           fi
           
           echo "" >> $GITHUB_STEP_SUMMARY

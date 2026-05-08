@@ -11,7 +11,7 @@
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp/",
 			"headers": {
-				"Authorization": "Bearer ${input:token}"
+				"Authorization": "Bearer ${env:GITHUB_MCP_TOKEN}"
 			}
 		},
 		"jira-automation": {
@@ -23,7 +23,7 @@
 			"env": {
 				"JIRA_BASE_URL": "https://banashreerautray.atlassian.net",
 				"JIRA_EMAIL": "banashree.rautray@gmail.com",
-				"JIRA_API_TOKEN": "ATATT3xFfGF0fBcD5NVFxq4U9uWAlHAurNQY2b4p3-0-pA5SZQoQERryxRdJED3tKO2T_K9wsBc4YPaF5TFSiFtYPQKLZ5hWXFKxstv6CZID9FotXVUoSxhLJkAzunXdHK36m3sFO6iy12fvERdxCsMemblqx1T1f_3ejFVGPuXorWFPH6odXf4=C09DEE21",
+				"JIRA_API_TOKEN": "${env:JIRA_API_TOKEN}",
 				"JIRA_PROJECT_KEY": "DEV",
 				"JIRA_WORKSPACE": "BanaMCPAgentsAutomobile"
 			}

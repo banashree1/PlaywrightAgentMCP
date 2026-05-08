@@ -1,0 +1,40 @@
+{
+	"servers": {
+		"microsoft/playwright-mcp": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@playwright/mcp@latest"
+			]
+		},
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp/",
+			"headers": {
+				"Authorization": "Bearer ${env:GITHUB_MCP_TOKEN}"
+			}
+		},
+		"jira-automation": {
+			"type": "stdio",
+			"command": "node",
+			"args": [
+				"C:\\Users\\barautra\\OneDrive - Capgemini\\Desktop\\All Playwright POC\\Playwright Demo to Ameritas\\MCPAgentsPlaywright\\jira-mcp-server.mjs"
+			],
+			"env": {
+				"JIRA_BASE_URL": "https://banashreerautray.atlassian.net",
+				"JIRA_EMAIL": "banashree.rautray@gmail.com",
+				"JIRA_API_TOKEN": "${env:JIRA_API_TOKEN}",
+				"JIRA_PROJECT_KEY": "DEV",
+				"JIRA_WORKSPACE": "BanaMCPAgentsAutomobile"
+			}
+		}
+	},
+	"inputs": [
+		{
+			"id": "token",
+			"type": "promptString",
+			"description": "GitHub token for MCP (needs repo and workflow access)",
+			"password": true
+		}
+	]
+}

@@ -175,17 +175,44 @@ Approval required. Choose one:
 ```
 Types: `feat` `fix` `test` `refactor` `ci` `docs` `chore` `perf` `revert`
 
+#### Release-First Branching Policy (MANDATORY)
+**ALL code changes must flow through the Release branch before reaching `main`.** Never commit or push directly to `main`.
+
+```
+local changes → Release-V1 branch → PR → main
+```
+
+- **Default target branch for all commits/pushes**: `Release-V1`
+- **PR base branch**: always `main`
+- **Direct push to `main`**: FORBIDDEN — always blocked, always use PR
+- If a `release/<semver>` branch exists for the current task, use that instead of `Release-V1`
+- After PR is merged to `main`, the Release branch may be updated or deleted per user instruction
+
 #### Push Sequence
-0. Re-run `git status --short` immediately before staging anything.
-1. If there are uncommitted local changes, summarize the current files and ask the user whether to commit, push/check in, wait, or keep them local before staging anything.
-2. `git add <specific files>` — never `git add .` unless all changes are intentional.
-3. `git commit -m "<conventional message>"`
-4. `git push origin <branch>`
-5. Report push result and ask user approval before PR creation.
-6. Only after explicit user approval, create PR via `github/create_pull_request` with:
+0. **Pull latest from Release-V1 FIRST (MANDATORY)** — Before making any local edits or staging any files, always sync with the remote Release branch:
+   ```bash
+   git fetch origin
+   git checkout Release-V1
+   git pull origin Release-V1
+   ```
+   This ensures all local work is based on the latest Release-V1 state and avoids merge conflicts caused by stale local code. **Never skip this step — not even for small changes.**
+1. Re-run `git status --short` immediately before staging anything.
+2. If there are uncommitted local changes, summarize the current files and ask the user whether to commit, push/check in, wait, or keep them local before staging anything.
+3. Confirm current branch is a Release branch (`Release-V1` or `release/<semver>`). If on any other branch, switch or create the correct release branch first.
+4. **Conflict check before push** — run `git fetch origin main` then `git merge-base --fork-point origin/main HEAD` and `git diff origin/main...HEAD --name-only` to detect divergence. If conflicts exist between the Release branch and `main`:
+   a. Run `git merge origin/main --no-commit --no-ff` to surface conflicts.
+   b. List every conflicting file with `git diff --name-only --diff-filter=U`.
+   c. Show each conflict hunk to the user.
+   d. Attempt auto-resolution where safe (non-overlapping changes). For overlapping hunks, present both sides and ask the user to choose.
+   e. After all conflicts are resolved and staged, present the merge approval prompt — **do NOT merge or push until the user explicitly approves**.
+5. `git add <specific files>` — never `git add .` unless all changes are intentional.
+6. `git commit -m "<conventional message>"`
+7. `git push origin <release-branch>`
+8. Report push result and ask user approval before PR creation.
+9. Only after explicit user approval, create PR via `github/create_pull_request` with:
   - **title**: `[<JIRA-ID>] <conventional commit summary>`
   - **body**: include task description, test results summary, and checklist below.
-  - **base**: `main` (or `develop` for feature work).
+  - **base**: `main` (ALWAYS — never target a release branch as PR base).
   - **draft**: `true` if tests are still running; convert to ready when green.
 
 #### PR Body Template
@@ -256,8 +283,10 @@ When auto-trigger is not available, dispatch manually:
 | Item | Value |
 |---|---|
 | Integration branch | `main` |
+| **Release branch (primary staging)** | **`Release-V1`** |
 | Secondary branch | `develop` |
 | Feature branch pattern | `feature/**` |
+| **Branching flow** | **`local → Release-V1 → PR → main`** |
 | CI workflows | `playwright-ci.yml`, `playwright-automation.yml` |
 | Browser policy | Chromium only (do NOT re-enable Firefox/WebKit without approval) |
 | Artifact names | `playwright-report-chromium`, `test-results-chromium` |
@@ -292,13 +321,21 @@ Both unavailable?
 - **No `git add .`** — always stage specific files.
 - **Local change approval gate**: if local changes are detected, ask whether to commit, push, check in, or keep them local before taking any git write action.
 - **Approval UX**: when asking for approval, always present the choices as a short numbered list so the user can reply with a single number or a clear approval word.
+- **Release-first policy**: NEVER push or commit directly to `main`. Always use `Release-V1` (or a `release/<semver>` branch) as the staging branch. Only `main` receives code via merged PRs.
 - **No secrets in commits** — tokens, passwords, and keys must never appear in committed files or logs.
 - **No destructive actions** (branch delete, release delete, file purge) without explicit user confirmation.
 - **On push failure**, stop and ask before creating a new feature branch or opening a PR.
 - **PR creation gate**: after a successful branch push, always ask for explicit approval before opening a PR to `main` or `develop`.
 - **No Firefox/WebKit** in CI config unless user explicitly requests it.
 - **Protected branches**: if push to `main` is rejected, create a PR — do not bypass.
-- **Conflict resolution**: halt on merge conflict; show conflicting hunks; ask user for resolution strategy.
+- **Conflict resolution (MANDATORY)**:
+  1. Before any PR is created from `Release-V1` → `main`, always check for merge conflicts via `git fetch origin main` + `git merge origin/main --no-commit --no-ff`.
+  2. If conflicts are detected: **STOP. Do NOT create or merge the PR.**
+  3. List all conflicting files using `git diff --name-only --diff-filter=U`.
+  4. Display each conflict hunk clearly, showing both `<<<<<<< HEAD` (Release branch) and `>>>>>>> origin/main` (main) sides.
+  5. Attempt safe auto-resolution for non-overlapping changes only. For overlapping hunks, present both versions and ask the user to choose the correct one.
+  6. After all conflicts are resolved and verified, stage the resolved files and ask the user for explicit merge approval before proceeding.
+  7. Only after the user approves: commit the resolution, push, then create/update the PR.
 - **Do not parse `.vscode/mcp.json`** with strict JSON tooling (file contains comments and trailing commas).
 
 ---
@@ -326,27 +363,28 @@ Both unavailable?
              github/get_file_contents → tests/us/dev-70-vehicle-validation.spec.js
 3. [Phase 3] edit: fix selector / assertion
              execute: npx playwright test tests/us/dev-70-vehicle-validation.spec.js --project=chromium
-4. [Phase 4] git checkout -b fix/DEV-70-vehicle-validation-selector
+4. [Phase 4] git checkout Release-V1  ← ALWAYS stage on Release branch
              git add tests/us/dev-70-vehicle-validation.spec.js
              git commit -m "fix(test): correct vehicle make selector in DEV-70 spec"
-             git push origin fix/DEV-70-vehicle-validation-selector
+             git push origin Release-V1
              ask user approval to open PR
-             github/create_pull_request → [DEV-70] Fix vehicle validation selector
+             github/create_pull_request → base: main  ← PR always targets main
 5. [Phase 5] Poll github/list_workflow_runs until success
              github/list_workflow_run_artifacts → confirm playwright-report-chromium uploaded
              jira-automation/update_issue DEV-70 → add PR link comment
 ```
 
-### Create a Feature Branch + PR from Scratch
+### Create a Feature + PR from Scratch
 ```
 1. [Phase 1] Parse: "Implement DEV-72 premium calculation test"
 2. [Phase 2] Read existing specs; check open PRs for DEV-72
 3. [Phase 3] edit: create tests/us/dev-72-premium-calculation.spec.js
              execute: npx playwright test tests/us/dev-72-premium-calculation.spec.js --project=chromium
-4. [Phase 4] github/create_branch feature/DEV-72-premium-calculation
-             git push
+4. [Phase 4] git checkout Release-V1  ← stage on Release branch
+             git add tests/us/dev-72-premium-calculation.spec.js
+             git push origin Release-V1
              ask user approval to open PR
-             github/create_pull_request (draft: true)
+             github/create_pull_request → base: main (draft: true)
 5. [Phase 5] Monitor CI; convert PR from draft to ready when green
 ```
 

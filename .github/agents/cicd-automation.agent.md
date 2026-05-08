@@ -126,11 +126,26 @@ git diff --stat
 git log --oneline -5
 ```
 - Confirm clean working tree except for intended changes.
+- If `git status --short` shows local modifications, stop and ask the user what to do next: `commit`, `push`, `check in`, or `leave local only`.
+- Do not commit, check in, or push local changes unless the user explicitly approves that action.
 - Confirm correct branch (`feature/<ticket>`, `fix/<ticket>`, `hotfix/<version>`, etc.).
 - Confirm remote mapping before any pull/push operation.
 - Create the branch first if it does not exist.
 
 ### Phase 4 — Push to GitHub & PR Approval Gate
+
+#### Approval Prompt Format
+- Whenever user approval is required for local changes, commit, check-in, push, PR creation, merge, or deployment, present the request as a compact choice list.
+- Use this format exactly:
+```text
+Approval required. Choose one:
+1. Approve commit
+2. Approve push / check in
+3. Wait
+4. Keep local only
+```
+- Adapt the option labels to the current step, but always include a `Wait` option when the user may want no action.
+- Do not take the action until the user selects or clearly approves one option.
 
 #### Branch Naming Convention
 | Intent | Branch pattern |
@@ -153,6 +168,7 @@ git log --oneline -5
 Types: `feat` `fix` `test` `refactor` `ci` `docs` `chore` `perf` `revert`
 
 #### Push Sequence
+0. If there are uncommitted local changes, ask the user whether to `commit`, `push`, `check in`, or keep the changes local before staging anything.
 1. `git add <specific files>` — never `git add .` unless all changes are intentional.
 2. `git commit -m "<conventional message>"`
 3. `git push origin <branch>`
@@ -265,6 +281,8 @@ Both unavailable?
 
 - **No force-push** or history rewrite unless user explicitly types "force push approved".
 - **No `git add .`** — always stage specific files.
+- **Local change approval gate**: if local changes are detected, ask whether to commit, push, check in, or keep them local before taking any git write action.
+- **Approval UX**: when asking for approval, always present the choices as a short numbered list so the user can reply with a single number or a clear approval word.
 - **No secrets in commits** — tokens, passwords, and keys must never appear in committed files or logs.
 - **No destructive actions** (branch delete, release delete, file purge) without explicit user confirmation.
 - **On push failure**, stop and ask before creating a new feature branch or opening a PR.

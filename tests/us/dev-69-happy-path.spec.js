@@ -11,7 +11,7 @@ test.describe('DEV-69 Happy Path End-to-End', () => {
     await page.goto(testData.applicationUrl);
 
     // Tab 1: Vehicle Data
-    await page.getByRole('link', { name: 'Automobile' }).click();
+    //await page.getByRole('link', { name: 'Automobile' }).click();
     await page.locator('#make').selectOption(testData.vehicleData.make);
     await page.locator('#engineperformance').fill(testData.vehicleData.enginePerformance);
     await page.getByRole('textbox', { name: 'MM/DD/YYYY' }).fill(testData.vehicleData.dateOfManufacture);

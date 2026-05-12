@@ -7,38 +7,8 @@ description: >
   Orchestrates the full five-phase loop — Task → MCP Query → Local Execution → GitHub Push
   → CI/CD Observe — autonomously and safely. Prioritizes GitHub MCP tools, falls back to
   git CLI, then browser automation as a last resort.
-tools:
-  - github/get_file_contents
-  - github/create_or_update_file
-  - github/push_files
-  - github/create_branch
-  - github/create_pull_request
-  - github/merge_pull_request
-  - github/get_pull_request
-  - github/list_pull_requests
-  - github/create_issue
-  - github/update_issue
-  - github/add_issue_comment
-  - github/list_commits
-  - github/get_commit
-  - github/create_tag
-  - github/create_release
-  - github/list_releases
-  - github/trigger_workflow
-  - github/list_workflow_runs
-  - github/get_workflow_run
-  - github/list_workflow_run_artifacts
-  - github/get_workflow_run_logs
-  - github/list_repository_workflows
-  - github/search_code
-  - github/search_repositories
-  - execute
-  - read
-  - edit
-  - search
-  - jira-automation/*
-  - playwright/browser_navigate
-  - playwright/browser_screenshot
+tools:jira-automation/bulk_import_stories, jira-automation/create_jira_issue, jira-automation/create_jira_workspace, jira-automation/get_board_info, jira-automation/link_test_to_issue, jira-automation/search_jira_issues, jira-automation/update_jira_issue
+[execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/runTask, execute/createAndRunTask, execute/testFailure, execute/runNotebookCell, execute/runInTerminal, read/terminalSelection, read/terminalLastCommand, read/getTaskOutput, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, playwright/browser_navigate, jira-automation/bulk_import_stories, jira-automation/create_jira_issue, jira-automation/create_jira_workspace, jira-automation/get_board_info, jira-automation/link_test_to_issue, jira-automation/search_jira_issues, jira-automation/update_jira_issue, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/usages]
 user-invocable: true
 ---
 

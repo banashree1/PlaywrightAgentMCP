@@ -19,7 +19,7 @@ mcp-servers:
     args:
       - C:\Users\barautra\OneDrive - Capgemini\Desktop\All Playwright POC\Playwright Demo to Ameritas\MCPAgentsPlaywright\jira-mcp-server.mjs
     env:
-      JIRA_BASE_URL: https://banashreerautray.atlassian.net
+      JIRA_BASE_URL: https://banashreerautray-1778551818237.atlassian.net
       JIRA_EMAIL: banashree.rautray@gmail.com
       JIRA_API_TOKEN: "${env:JIRA_API_TOKEN}"
       JIRA_PROJECT_KEY: DEV

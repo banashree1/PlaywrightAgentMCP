@@ -20,9 +20,9 @@
       "args": ["jira-mcp-server.mjs"],
       "cwd": ".",
       "env": {
-        "JIRA_BASE_URL": "https://banashreerautray.atlassian.net",
+        "JIRA_BASE_URL": "https://banashreerautray-1778551818237.atlassian.net",
         "JIRA_EMAIL": "banashree.rautray@gmail.com",
-        "JIRA_PROJECT_KEY": "DEV",
+        "JIRA_PROJECT_KEY": "KAN",
         "JIRA_WORKSPACE": "BanaMCPAgentsAutomobile"
       },
       "description": "JIRA MCP Server for automobile insurance testing automation",

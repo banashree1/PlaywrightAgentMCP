@@ -22,10 +22,10 @@ import fetch from 'node-fetch';
 
 // JIRA Configuration
 const JIRA_CONFIG = {
-  baseUrl: process.env.JIRA_BASE_URL || "https://banashreerautray.atlassian.net",
+  baseUrl: process.env.JIRA_BASE_URL || "https://banashreerautray-1778551818237.atlassian.net",
   email: process.env.JIRA_EMAIL,
   apiToken: process.env.JIRA_API_TOKEN,
-  projectKey: process.env.JIRA_PROJECT_KEY || "DEV",
+  projectKey: process.env.JIRA_PROJECT_KEY || "KAN",
   workspace: process.env.JIRA_WORKSPACE || "BanaMCPAgentsAutomobile"
 };
 

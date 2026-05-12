@@ -1,0 +1,14 @@
+{
+  "testName": "KAN-5 - Vehicle Data Tab - Happy Path",
+  "applicationUrl": "https://sampleapp.tricentis.com/101/app.php",
+  "vehicleData": {
+    "make": "Toyota",
+    "enginePerformance": "120",
+    "dateOfManufacture": "01/15/2020",
+    "numberOfSeats": "5",
+    "fuel": "Petrol",
+    "listPrice": "25000",
+    "licensePlateNumber": "KAN5",
+    "annualMileage": "12000"
+  }
+}

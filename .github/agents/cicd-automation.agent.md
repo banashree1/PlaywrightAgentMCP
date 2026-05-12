@@ -7,9 +7,42 @@ description: >
   Orchestrates the full five-phase loop — Task → MCP Query → Local Execution → GitHub Push
   → CI/CD Observe — autonomously and safely. Prioritizes GitHub MCP tools, falls back to
   git CLI, then browser automation as a last resort.
-tools:jira-automation/bulk_import_stories, jira-automation/create_jira_issue, jira-automation/create_jira_workspace, jira-automation/get_board_info, jira-automation/link_test_to_issue, jira-automation/search_jira_issues, jira-automation/update_jira_issue
-[execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/runTask, execute/createAndRunTask, execute/testFailure, execute/runNotebookCell, execute/runInTerminal, read/terminalSelection, read/terminalLastCommand, read/getTaskOutput, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, playwright/browser_navigate, jira-automation/bulk_import_stories, jira-automation/create_jira_issue, jira-automation/create_jira_workspace, jira-automation/get_board_info, jira-automation/link_test_to_issue, jira-automation/search_jira_issues, jira-automation/update_jira_issue, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/usages]
+tools:'github/*', 'jira-automation/*', 'git-automation/*'
+[execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/runTask, execute/createAndRunTask, execute/testFailure, execute/runNotebookCell, execute/runInTerminal, read/terminalSelection, read/terminalLastCommand, read/getTaskOutput, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, playwright/browser_navigate, github/create_pull_request, github/get_pull_request, github/list_pull_requests, github/merge_pull_request, github/get_file_contents, github/list_commits, github/get_commit, github/list_workflow_runs, github/get_workflow_run, github/get_workflow_run_logs, github/list_workflow_run_artifacts, github/create_tag, github/create_release, github/search_code, github/get_repository, jira-automation/bulk_import_stories, jira-automation/create_jira_issue, jira-automation/create_jira_workspace, jira-automation/get_board_info, jira-automation/link_test_to_issue, jira-automation/search_jira_issues, jira-automation/update_jira_issue, git-automation/auto_commit, git-automation/smart_commit, git-automation/push, git-automation/status, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/usages]
 user-invocable: true
+mcp-servers:
+  github:
+    type: stdio
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-github"
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: "${env:GITHUB_MCP_TOKEN}"
+    tools:
+      - "*"
+  jira-automation:
+    type: stdio
+    command: node
+    args:
+      - C:\Users\barautra\OneDrive - Capgemini\Desktop\All Playwright POC\Playwright Demo to Ameritas\MCPAgentsPlaywright\jira-mcp-server.mjs
+    env:
+      JIRA_BASE_URL: https://banashreerautray.atlassian.net
+      JIRA_EMAIL: banashree.rautray@gmail.com
+      JIRA_API_TOKEN: "${env:JIRA_API_TOKEN}"
+      JIRA_PROJECT_KEY: DEV
+      JIRA_WORKSPACE: BanaMCPAgentsAutomobile
+    tools:
+      - "*"
+  git-automation:
+    type: stdio
+    command: node
+    args:
+      - C:\Users\barautra\OneDrive - Capgemini\Desktop\All Playwright POC\Playwright Demo to Ameritas\MCPAgentsPlaywright\scripts\git-mcp-server.js
+    env:
+      GIT_REPO_PATH: C:\Users\barautra\OneDrive - Capgemini\Desktop\All Playwright POC\Playwright Demo to Ameritas\MCPAgentsPlaywright
+    tools:
+      - "*"
 ---
 
 # Enterprise CI/CD Automation Agent

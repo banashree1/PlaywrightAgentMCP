@@ -12,15 +12,10 @@ tools:'github/*', 'jira-automation/*', 'git-automation/*'
 user-invocable: true
 mcp-servers:
   github:
-    type: stdio
-    command: npx
-    args:
-      - -y
-      - "@modelcontextprotocol/server-github"
-    env:
-      GITHUB_PERSONAL_ACCESS_TOKEN: "${env:GITHUB_MCP_TOKEN}"
-    tools:
-      - "*"
+    type: http
+    url: https://api.githubcopilot.com/mcp/
+    headers:
+      Authorization: "Bearer ${env:GITHUB_MCP_TOKEN}"
   jira-automation:
     type: stdio
     command: node

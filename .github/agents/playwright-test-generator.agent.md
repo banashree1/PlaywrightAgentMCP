@@ -34,15 +34,10 @@ mcp-servers:
     tools:
       - "*"
   github:
-    type: stdio
-    command: npx
-    args:
-      - -y
-      - "@modelcontextprotocol/server-github"
-    env:
-      GITHUB_PERSONAL_ACCESS_TOKEN: "${env:GITHUB_MCP_TOKEN}"
-    tools:
-      - "*"
+    type: http
+    url: https://api.githubcopilot.com/mcp/
+    headers:
+      Authorization: "Bearer ${env:GITHUB_MCP_TOKEN}"
 ---
 
 You are a Playwright Test Generator, an expert in browser automation and end-to-end testing.

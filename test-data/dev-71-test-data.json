@@ -1,0 +1,41 @@
+{
+  "testName": "DEV-71 - Insurant Address Validation - Required Fields and Input Rules",
+  "applicationUrl": "https://sampleapp.tricentis.com/101/app.php",
+  "vehicleData": {
+    "make": "Toyota",
+    "enginePerformance": "120",
+    "dateOfManufacture": "01/15/2020",
+    "numberOfSeats": "5",
+    "fuel": "Petrol",
+    "listPrice": "25000",
+    "licensePlateNumber": "DEV71",
+    "annualMileage": "12000"
+  },
+  "insurantData": {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "dateOfBirth": "06/15/1985",
+    "genderMale": "gendermale",
+    "genderFemale": "genderfemale",
+    "defaultGender": "genderfemale",
+    "streetAddress": "221B Baker Street",
+    "country": "India",
+    "zipCode": "560001",
+    "city": "Bengaluru",
+    "occupation": "Employee",
+    "hobbies": {
+      "speeding": "speeding",
+      "bungeeJumping": "bungeejumping",
+      "cliffDiving": "cliffdiving",
+      "skydiving": "skydiving",
+      "other": "other"
+    },
+    "altFirstName": "John",
+    "altLastName": "Doe",
+    "altStreetAddress": "10 Downing Street",
+    "altZipCode": "110001",
+    "altCity": "New Delhi"
+  },
+  "expectedCountries": ["India"],
+  "expectedOccupations": ["Employee", "Public Official", "Farmer", "Unemployed", "Selfemployed"]
+}

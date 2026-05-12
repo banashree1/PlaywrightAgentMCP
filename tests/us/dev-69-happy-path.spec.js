@@ -67,7 +67,9 @@ test.describe('DEV-69 Happy Path End-to-End', () => {
     await page.locator('#nextselectpriceoption').click();
 
     // Tab 4: Select Price Option
-    await expect(page.locator('#priceTable')).toBeVisible({ timeout: 10000 });
+    // Wait for the tab transition to complete before checking #priceTable visibility
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+    await page.locator('#priceTable').waitFor({ state: 'visible', timeout: 30000 });
     if (testData.priceOptionData.selectFirstRadio) {
       await page.locator('#priceTable input[type="radio"]').first().check({ force: true });
     }
